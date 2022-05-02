@@ -2,6 +2,7 @@
 				_id,
 				title,
 				description,
+				year
 						
 				category-> {
 					type
