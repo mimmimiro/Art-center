@@ -1,18 +1,18 @@
 <template>
 		<main>
 			
-			 <!-- product section - all the products are fetched from Sanity -->
-			<h1 class="product__header">{{ title }}</h1>
+			 <!-- project section - all the projects are fetched from Sanity -->
+			<h1 class="project__header">{{ title }}</h1>
 			<div v-if="loading">waiting</div>
-				<div class="product" v-else>
-					<section class="product__section" v-for="project in result" :key="project._id">
+				<div class="project" v-else>
+					<section class="project__section" v-for="project in result" :key="project._id">
 						<card>
-							<h3 class="product__title">Title - {{ project.title}}</h3>
-							<img class="product__image" :src="project.projectImage.asset.url" :alt="project.title"> 
-							<div class="product__category">Category: {{ project.category.type }}</div>
-							<div class="product__description"> {{ project.description }}</div>
-							<div class="product__price">Price ${{ project.year}}</div>
-							<button class="product__button" @click="addToCart(product)">Add to cart</button>
+							<h3 class="project__title">Title - {{ project.title}}</h3>
+							<img class="project__image" :src="project.projectImage.asset.url" :alt="project.title"> 
+							<div class="project__category">Category: {{ project.category.type }}</div>
+							<div class="project__description"> {{ project.description }}</div>
+							<div class="project__year">Price ${{ project.year}}</div>
+							<button class="project__button"></button>
 						</card>
 					</section>
 				</div>
@@ -44,27 +44,8 @@
 			});
 			
 		},
-		computed: {
-			 totalPrice() {
-              let total = 0;
-              total += this.cart.reduce((left, curent) => left + curent.price, 0);
-               return total;
-         }
-		},
-		methods: {
-    		addToCart(product) {
-      		this.cart.push(product);
-				// console.log(product);
-				console.log(this.cart);
-    	},
-			removeFromCart(product) {
-     		 	this.cart.splice(this.cart.indexOf(product), 1);
-    		},
-			checkout() { 
-			 this.cart = [];
-			 alert(`Thank you, for shopping at our store !`);
-			 }
-		}
+		
+		
 	}
 </script>
 
