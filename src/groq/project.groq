@@ -1,16 +1,17 @@
 *[_type == $type] | order(title asc) {
-				_id,
-				title,
-				description,
-				year
-						
-				category-> {
+	 _id,
+	title,
+	description,
+	year,
+   
+  category-> {
 					type
-				},
-				
-				projectImage {
+	},
+
+  projectImage {
 					asset-> {
 					url
 				}
 				}
-			}
+				
+}
