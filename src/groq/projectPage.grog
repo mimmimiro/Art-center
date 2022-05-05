@@ -1,0 +1,11 @@
+*[slug.current == $slug] {
+  ...,
+  
+  projectImage {
+      asset-> { url }
+  },   
+
+ category -> {
+   type
+ }
+}

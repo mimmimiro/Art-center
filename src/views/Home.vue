@@ -3,7 +3,7 @@
 			
 			 <!-- project section - all the projects are fetched from Sanity -->
 			<h1 class="project__header">{{ title }}</h1>
-			<div v-if="loading">waiting</div>
+			<div v-if="loading">Loading....</div>
 				<div class="project" v-else>
 					<section class="project__section" v-for="project in result" :key="project._id">
 						<card>
@@ -12,17 +12,11 @@
 							<div class="project__category">{{ project.category.type }}</div>
 							<div class="project__description"> {{ project.description }}</div>
 							<div class="project__year">{{ project.year}}</div>
-							<button class="project__button"  @click="showSingleProject(project)" v-if="!showProject"
+							<button class="project__button"
 							>show project</button>
 						</card>
 					</section>
 				</div>
-				<button> here
-				 <div v-if="showProject === true" class="modal__dropdown">
-							<h2 class="modal__header">{{ project.title}}</h2>
-							<div v-for="project in modal" :key="project._id"></div>
-      			</div>
-					</button>
 		</main>
 </template>
 
@@ -41,9 +35,6 @@
 			return {
 				title: 'portofolio',
 				result: [],
-				modal: [],
-				showProject: false,
-				
 			}
 		},
 		// grog query, to fetch information from sanity studio
@@ -53,23 +44,6 @@
 			});
 			
 		},
-		computed: {
-		 toggle() {
-			if(this.showProject) {
-				return false
-			}
-			else return true
-		 }
-		},
-		methods: {
-    		showSingleProject(project) {
-      		this.modal.push(project);
-				console.log(project)
-			 }
-
-		}
-		
-		
 	}
 </script>
 
