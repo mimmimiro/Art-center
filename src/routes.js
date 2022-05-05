@@ -1,5 +1,5 @@
 import Home from './views/Home.vue';
-import Portofolio from './views/Portofolio.vue';
+import PortofolioPage from './views/PortofolioPage.vue';
 
 export default [
 	{ 
@@ -9,8 +9,8 @@ export default [
 	},
 
 	{
-		name: 'portofolio',
+		name: 'portofolioPage',
 		path: '/:projectSlug',
-		component: Portofolio
+		component: PortofolioPage
 	}
 ];
