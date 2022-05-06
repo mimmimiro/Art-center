@@ -3,6 +3,7 @@
 	<card>
 	<h3 class="project__title">Title - {{ project.title}}</h3>
 	<img class="project__image" :src="project.projectImage.asset.url" :alt="project.title">
+	<p>{{ project.description }}</p>
 	</card>
 	</div>
 </template>

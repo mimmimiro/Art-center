@@ -1,15 +1,19 @@
 
 <template>
-<Portofolio />
+<Header />
 		
 </template>
 
 <script>
-import Portofolio from '../components/Portofolio.vue';
+import Header from '../components/Header.vue';
 export default {
 	components: {
-		Portofolio
-	}
+		Header
+	},
+	
+		mounted() {
+			//console.log(this.$route.params.page)
+		}
 }
    
 </script>

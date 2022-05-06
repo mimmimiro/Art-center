@@ -4,6 +4,7 @@
 	description,
 	year,
 	href,
+	slug,
    
   category-> {
 					type
@@ -13,6 +14,6 @@
 					asset-> {
 					url
 				}
-				}
+	}
 				
 }
