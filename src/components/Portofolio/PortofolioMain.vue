@@ -4,9 +4,9 @@
 		<!-- <section  v-for="title in cardMain" :key="title.id"> -->
 		
 			<!-- <div>{{ title.title[1] }}</div> -->
-			<div><RouterLink class="header__navigation-link" :to="{ name: 'frontend' }">Frontend</RouterLink></div>
-			<div><RouterLink class="header__navigation-link" :to="{ name: 'graphicDesign' }">Graphic Design</RouterLink></div>
-			<div><RouterLink class="header__navigation-link" :to="{ name: 'art' }">Art</RouterLink></div>
+			<div><RouterLink class="header__navigation-link" to="/portfoliomain/frontend">Frontend</RouterLink></div>
+			<div><RouterLink class="header__navigation-link" to="/portfoliomain/graphics">Graphic Design</RouterLink></div>
+			<div><RouterLink class="header__navigation-link" to="/portfoliomain/frontend">Art</RouterLink></div>
 			
 		</section>
 		
@@ -20,6 +20,9 @@ export default {
 	components: {
 		Card,
 		Header
+	},
+	mounted() {
+		console.log(this.$route.params.category)
 	},
 	data() {
 		return {

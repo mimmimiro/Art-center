@@ -5,6 +5,7 @@ import PortofolioMain from './components/Portofolio/PortofolioMain.vue';
 import Frontend from './components/Portofolio/Frontend.vue';
 import GraphicDesign from './components/Portofolio/GraphicDesign.vue';
 import Art from './components/Portofolio/Art.vue';
+import About from './views/About.vue';
 // import Form from './components/Form.vue';
 
 export default [
@@ -12,6 +13,11 @@ export default [
 		name: 'home', 
 		path: '/', 
 		component: Home 
+	},
+	{ 
+		name: 'about', 
+		path: '/About', 
+		component: About
 	},
 	{ 
 		name: 'frontend', 
@@ -46,7 +52,7 @@ export default [
 	},
 	{ 
 		name: 'portofolioMain', 
-		path: '/PortofolioMain', 
+		path: '/portofoliomain/', 
 		component: PortofolioMain
 	},
 ];

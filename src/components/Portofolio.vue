@@ -89,7 +89,12 @@
 		height: 30vh;
 	}
 	.project__button {
-		background-color: coral;
+		background-color: 276448;
+		color: azure;
+		width: 200px;
+		padding: 5px;
+		border-radius: 6px;
+		margin-top: 10px;
 	}
 
 	
