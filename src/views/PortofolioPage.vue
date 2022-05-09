@@ -3,6 +3,7 @@
    <div v-for="project in result" :key="project._id" class="project">
 	   <h3 class="project__title">Title - {{ project.title}}</h3>
 	   <img class="project__image" :src="project.projectImage.asset.url" :alt="project.title">
+		<div class="project__year">{{ project.year}}</div>
 	   <p>{{ project.description }}</p>
 	</div>
 </template>
@@ -31,3 +32,9 @@
 		},
 	}
 </script>
+
+<style>
+   .project__title {
+		
+	}
+</style>

@@ -27,7 +27,6 @@
 		display: grid;
 		grid-template-columns: var(--grid-column-12);
 		grid-gap: var(--gap-big);
-		
 	}
 	.container__header {
 		background-color: #fdfcfb;

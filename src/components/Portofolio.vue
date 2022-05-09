@@ -2,10 +2,10 @@
 	<Header />
 		<main>
 			 <!-- project section - all the projects are fetched from Sanity -->
-			<h1 class="project__header">{{ title }}</h1>
+			<!-- <h1 class="project__header">{{ title }}</h1> -->
 			<div v-if="loading">Loading....</div>
 				<div class="projecta" v-else>
-					<h3>Filter By Category</h3> 
+					<h3>Category</h3> 
 					<select v-model="category">
 							<option valeu="Graphic design">Graphic design</option>
 							<option valeu="Art">Art</option>
@@ -13,16 +13,13 @@
 					</select>
 					<section class="project">
 					<section  v-for="project in result" :key="project._id">
+						
 						<card>
-							<h3 class="project__title">Title - {{ project.title}}</h3>
+							<router-link :to="{ name: 'portofolioPage', params: { projectSlug: project.slug.current }}">	
+							<button class="project__button">
+							<h3 class="project__title"> {{ project.title}}</h3>
 							<img class="project__image" :src="project.projectImage.asset.url" :alt="project.title"> 
-							<div class="project__category">{{ project.category.type }}</div>
-							<div class="project__description"> {{ project.description }}</div>
-							<div class="project__year">{{ project.year}}</div>
-							
-				   	<router-link :to="{ name: 'portofolioPage', params: { projectSlug: project.slug.current }}">	
-							<button class="project__button"
-							>show project
+							<!-- <div class="project__category">{{ project.category.type }}</div> -->
 							</button>
 					    </router-link>
 							
@@ -86,16 +83,18 @@
 	
 	.project__image {
 		width: 20vw;
-		height: 30vh;
+		height: 35vh;
+		margin: 20px 25px 20px 30px;
+		
 	}
-	.project__button {
+	/* .project__button {
 		background-color: 276448;
 		color: azure;
 		width: 200px;
 		padding: 5px;
 		border-radius: 6px;
 		margin-top: 10px;
-	}
+	} */
 
 	
 </style>

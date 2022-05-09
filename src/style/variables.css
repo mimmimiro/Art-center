@@ -2,6 +2,17 @@
 	--background: white;
 	--foreground: black;
 	
-	--font-family: "Arial";
+	--font-family: "arial";
 	--font-size: 20px;
+	--heading: 35px;
+
+	--outside-margin: 0px 20px;
+	--bottom-small: 20px;
+	--bottom-large: 50px;
+	--top-small: 20px;
+	--top-large: 30px;
+
+	/* grid */
+	--gap-big: 10px;
+	--grid-column-12: repeat(12, 1fr);
 }
