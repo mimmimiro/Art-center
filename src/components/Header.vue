@@ -1,7 +1,7 @@
 <template>
 	<section class="container">
 		<header class="container__header">
-			<!-- <img class="container__header-logo" src="/images/logo.png" alt="app-logo"> -->
+			<img class="container__header-logo" src="/images/logo.png" alt="app-logo">
 			<nav class="header__navigation">
 				<RouterLink class="header__navigation-link" :to="{ name: 'home' }">Home</RouterLink>
 				<RouterLink class="header__navigation-link" :to="{ name: 'portofolio' }">Projects</RouterLink>
@@ -35,14 +35,15 @@
 		height: 120px;
 	}
 	.header__navigation {
-		grid-column: 5 / span 7;
-		padding-top: 40px;
+		grid-column: 11 / span 2;
+		padding-top: 70px;
+		font-size: 1.3rem;
 	}
 	.header__navigation-link {
 		text-decoration: none;
-		color: 276448;
+		color: rgb(71, 100, 112);
 		font-weight: 600;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		padding: 20px;
 	}
 	.header__navigation-link:hover,
@@ -53,7 +54,7 @@
 	.container__header-logo {
 		transition: transform 1s ease-in-out;
 		width: 40%;
-		padding: 0px 0px 0px 0px;
+		padding: 10px 0px 0px 0px;
 		grid-column: 1/ span 4;
 		grid-row: 1;
 		margin-left: 20px;

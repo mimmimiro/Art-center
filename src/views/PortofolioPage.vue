@@ -34,7 +34,5 @@
 </script>
 
 <style>
-   .project__title {
-		
-	}
+ 
 </style>

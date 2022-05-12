@@ -1,12 +1,8 @@
 import Home from './views/Home.vue';
 import PortofolioPage from './views/PortofolioPage.vue';
 import Portofolio from './components/Portofolio.vue';
-import PortofolioMain from './components/Portofolio/PortofolioMain.vue';
-import Frontend from './components/Portofolio/Frontend.vue';
-import GraphicDesign from './components/Portofolio/GraphicDesign.vue';
-import Art from './components/Portofolio/Art.vue';
 import About from './views/About.vue';
-// import Form from './components/Form.vue';
+import ContactForm from './components/ContactForm.vue';
 
 export default [
 	{ 
@@ -19,26 +15,12 @@ export default [
 		path: '/About', 
 		component: About
 	},
+	
 	{ 
-		name: 'frontend', 
-		path: '/Frontend', 
-		component: Frontend 
+		name: 'form', 
+		path: '/form', 
+		component: ContactForm
 	},
-	{ 
-		name: 'graphicDesign', 
-		path: '/GraphicDesign', 
-		component: GraphicDesign 
-	},
-	{ 
-		name: 'art', 
-		path: '/Art', 
-		component: Art 
-	},
-	// { 
-	// 	name: 'form', 
-	// 	path: '/form', 
-	// 	component: Form
-	// },
 
 	{
 		name: 'portofolioPage',
@@ -50,9 +32,5 @@ export default [
 		path: '/Portofolio', 
 		component: Portofolio 
 	},
-	{ 
-		name: 'portofolioMain', 
-		path: '/portofoliomain/', 
-		component: PortofolioMain
-	},
+	
 ];

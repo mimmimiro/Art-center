@@ -1,32 +1,31 @@
 <template>
 	<Header />
-		<main>
+		<main class="portofolio">
 			 <!-- project section - all the projects are fetched from Sanity -->
-			<!-- <h1 class="project__header">{{ title }}</h1> -->
+			<h1 class="project__header">{{ title }}</h1>
 			<div v-if="loading">Loading....</div>
-				<div class="projecta" v-else>
-					<h3>Category</h3> 
-					<select v-model="category">
-							<option valeu="Graphic design">Graphic design</option>
-							<option valeu="Art">Art</option>
-							<option valeu="Frontend">Frontend</option>
+			<div v-else>
+					<span class="category">Choose category</span> 
+					<select class="category__dropdown" v-model="category">
+							<option valeu="Ceramic">Ceramic</option>
+							<option valeu="painting">Painting</option>
+							<option valeu="Graphics">Graphics</option>
 					</select>
-					<section class="project">
+				<section class="project">
 					<section  v-for="project in result" :key="project._id">
-						
-						<card>
+						<card class="project__card">
 							<router-link :to="{ name: 'portofolioPage', params: { projectSlug: project.slug.current }}">	
-							<button class="project__button">
-							<h3 class="project__title"> {{ project.title}}</h3>
-							<img class="project__image" :src="project.projectImage.asset.url" :alt="project.title"> 
-							<!-- <div class="project__category">{{ project.category.type }}</div> -->
-							</button>
-					    </router-link>
-							
+								<button class="project__button">
+									<img class="project__image" :src="project.projectImage.asset.url" :alt="project.title"> 
+									<h3 class="project__title"> {{ project.title}}</h3>
+									
+									<!-- <div class="project__category">{{ project.category.type }}</div> -->
+								</button>
+					    	</router-link>
 						</card>
-						</section>
 					</section>
-				</div>
+				</section>
+			</div>
 		</main>
 </template>
 
@@ -44,7 +43,7 @@
 		},
 		data() {
 			return {
-				title: 'portofolio',
+				title: 'Portofolio',
 				result: [],
 				category: ''
 			}
@@ -66,6 +65,10 @@
 </script>
 
 <style>
+	.portofolio {
+		background-color: rgb(251, 248, 241);
+		width: 100%;
+	}
 	.project {
 		display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -74,27 +77,34 @@
 		margin-top: var(--top-large);
 	}
 	.project__header {
-		color:#633930;
+		color: rgb(71, 100, 112);
 		text-align: center;
+		font-size: 1.9rem;
 	}
-	.project__title {
-		color: #633930;
+	.category { 
+		color: rgb(71, 100, 112);
+		margin: 0px 5px 10px 40px;
+		padding-top: 10px;
+		font-size: 1.6rem;
+	}
+	.category__dropdown {
+		border-radius: 7px;
+		font-size: 1.1rem;
+		background-color: white;
+		padding: 3px;
 	}
 	
 	.project__image {
-		width: 20vw;
-		height: 35vh;
-		margin: 20px 25px 20px 30px;
-		
+		width: 300px;
+		height: 300px;
+		object-fit: cover;
 	}
-	/* .project__button {
-		background-color: 276448;
-		color: azure;
-		width: 200px;
-		padding: 5px;
-		border-radius: 6px;
-		margin-top: 10px;
-	} */
+	.project__title {
+		color: rgb(71, 100, 112);
+	}
+	 .project__card:hover {
+		transform: scale(1.1);
+	} 
 
 	
 </style>
