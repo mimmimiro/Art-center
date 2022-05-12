@@ -2,9 +2,9 @@
 	<main class="card">
 		<card>
 			<div class="card__title">{{ title }}</div>
-			<span >{{ review }}</span>
+			<span class="card__review">{{ review }}</span>
 			<div class="card__image"><img class="image" :src="image"></div>
-			<div class="name">{{ name }}</div>
+			<span class="name">{{ name }}</span>
 		</card>
 	</main>
 </template>
@@ -48,16 +48,22 @@
 	}
 	.card__title {
 		text-align: center;
+		color: rgb(71, 100, 112);
+		font-weight: 600;
+		font-size: 1.4rem;
+	}
+	.card__review {
+		font-size: 1.2rem;
 	}
 	.card__image {
 		text-align: right;
 	}
 
 	.name {
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 	.image {
-		width: 15%;
+		width: 20%;
 		border-radius: 50%;
 		border: 1px solid #000;
 	}

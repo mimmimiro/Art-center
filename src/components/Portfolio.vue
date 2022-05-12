@@ -23,8 +23,6 @@
 								<button class="project__button">
 									<img class="project__image" :src="project.projectImage.asset.url" :alt="project.title"> 
 									<h3 class="project__title"> {{ project.title}}</h3>
-									
-									<!-- <div class="project__category">{{ project.category.type }}</div> -->
 								</button>
 					    	</router-link>
 						</card>
