@@ -1,8 +1,13 @@
 <template>
 	<Header />
-		<main class="portofolio">
+		<main class="portfolio">
 			 <!-- project section - all the projects are fetched from Sanity -->
-			<h1 class="project__header">{{ title }}</h1>
+			<h1 class="portfolio__header">{{ title }}</h1>
+			<p class="portfolio__text">Featuring detailed projects of artwork, these projects contain a wealth of knowledge about ideas explored, artists studied and artistic techniques and processes used, making them valuable learning tools for others.
+				<br>
+				<br>
+				What makes our projects unique and different is our innovative approach to an art form and design element. We specialize in customized with a focus on interior design and art enhancement. We offer high quality picture framing with an attention to detail that is reflected in each new piece whether it be an individual art piece or multiple pieces for entire hotel project.
+			</p>
 			<div v-if="loading">Loading....</div>
 			<div v-else>
 					<span class="category">Choose category</span> 
@@ -27,6 +32,7 @@
 				</section>
 			</div>
 		</main>
+	<Footer />
 </template>
 
 <script>
@@ -34,16 +40,18 @@
 	import viewMixin from '../mixins/viewMixin.js';
 	import Card from './Card.vue';
 	import Header from './Header.vue';
+	import Footer from '../components/Footer.vue';
 
 	export default {
 		mixins: [viewMixin],
 		components: {
 			Card,
-			Header
+			Header,
+			Footer
 		},
 		data() {
 			return {
-				title: 'Portofolio',
+				title: 'Our projects',
 				result: [],
 				category: ''
 			}
@@ -65,27 +73,30 @@
 </script>
 
 <style>
-	.portofolio {
-		background-color: rgb(251, 248, 241);
+	.portfolio {
+		background-color: rgb(249, 247, 241);
 		width: 100%;
+	}
+	.portfolio__text {
+		font-size: 1.2rem;
+		margin: 10px 40px 10px 40px;
 	}
 	.project {
 		display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: var(--gap-big);
 		margin: var(--outside-margin);
-		margin-top: var(--top-large);
+		margin-top: var(--top-small);
 	}
-	.project__header {
+	.portfolio__header {
 		color: rgb(71, 100, 112);
 		text-align: center;
 		font-size: 1.9rem;
 	}
 	.category { 
-		color: rgb(71, 100, 112);
-		margin: 0px 5px 10px 40px;
+		margin: 0px 5px 0px 40px;
 		padding-top: 10px;
-		font-size: 1.6rem;
+		font-size: 1.2rem;
 	}
 	.category__dropdown {
 		border-radius: 7px;
@@ -105,6 +116,15 @@
 	 .project__card:hover {
 		transform: scale(1.1);
 	} 
+	/* Small and medium screen devices  */
+   @media screen and (max-width: 1024px) {
+      .portofolio {
+          width: 100%;          
+   	}  
+		.project {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 
 	
 </style>

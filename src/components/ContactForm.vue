@@ -1,7 +1,7 @@
 <template>
 	<form class="contact">
 				<h1 class="contact__title">Contact Us</h1>
-					<input class="contact__input" type="text" placeholder="Name" v-model="name" />
+					<input class="contact__input" type="name" placeholder="Name" v-model="name" />
 					<input class="contact__input" type="email" placeholder="E-mail" v-model="email" />
 					<input class="contact__message" type="message" placeholder="Message" v-model="message" />
 		      <button class="contact__button" @click="submitForm">Submit</button>

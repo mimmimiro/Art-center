@@ -41,7 +41,7 @@ export default {
 	}
 	.footer__title {
 		grid-column: 1 / span 1;
-		color: 276448;
+		color: rgb(71, 100, 112);
 		padding-left: 10px;
 		padding-top: var(--top-small);
 	}
@@ -59,11 +59,12 @@ export default {
 	}
 	.footer__navigation-link--social {
 		width: 20px;
+		color: rgb(71, 100, 112);
 	}
 	
 	.footer__navigation-mail {
 		margin-top: 20px;
-		color: 276448;
+		color: rgb(71, 100, 112);
 	}
    /* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {
