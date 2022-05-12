@@ -1,6 +1,6 @@
 import Home from './views/Home.vue';
 import PortofolioPage from './views/PortofolioPage.vue';
-import Portofolio from './components/Portofolio.vue';
+import Portfolio from './components/Portfolio.vue';
 import About from './views/About.vue';
 import ContactForm from './components/ContactForm.vue';
 
@@ -28,9 +28,9 @@ export default [
 		component: PortofolioPage
 	},
 	{ 
-		name: 'portofolio', 
-		path: '/Portofolio', 
-		component: Portofolio 
+		name: 'portfolio', 
+		path: '/Portfolio', 
+		component: Portfolio 
 	},
 	
 ];

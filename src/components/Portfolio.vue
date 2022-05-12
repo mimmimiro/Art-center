@@ -32,8 +32,8 @@
 <script>
    import query from '../groq/project.groq?raw';
 	import viewMixin from '../mixins/viewMixin.js';
-	import Card from '../components/Card.vue';
-	import Header from '../components/Header.vue';
+	import Card from './Card.vue';
+	import Header from './Header.vue';
 
 	export default {
 		mixins: [viewMixin],

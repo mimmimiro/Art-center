@@ -4,7 +4,7 @@
 			<img class="container__header-logo" src="/images/logo.png" alt="app-logo">
 			<nav class="header__navigation">
 				<RouterLink class="header__navigation-link" :to="{ name: 'home' }">Home</RouterLink>
-				<RouterLink class="header__navigation-link" :to="{ name: 'portofolio' }">Projects</RouterLink>
+				<RouterLink class="header__navigation-link" :to="{ name: 'portfolio' }">Projects</RouterLink>
 			   <RouterLink class="header__navigation-link" :to="{ name: 'about' }">About</RouterLink>
 				<!-- <RouterLink class="header__navigation-link" :to="{ name: 'contact' }">Contact</RouterLink>  -->
 			</nav>

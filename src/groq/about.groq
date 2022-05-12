@@ -1,0 +1,9 @@
+*[_type == $type] | order(name asc) {
+  ...,
+  
+  aboutImage {
+     asset-> {
+      url
+     }
+  }
+}
