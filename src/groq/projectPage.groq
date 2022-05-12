@@ -4,6 +4,10 @@
   projectImage {
       asset-> { url }
   },   
+  
+  itemImage {
+   asset-> { url }
+ },
 
  category -> {
    type

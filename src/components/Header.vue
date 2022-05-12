@@ -29,7 +29,7 @@
 		grid-gap: var(--gap-big);
 	}
 	.container__header {
-		background-color: #fdfcfb;
+		background-color: #fffefe;
 		grid-column: 1/ span 12;
 		display: grid;
 		height: 120px;

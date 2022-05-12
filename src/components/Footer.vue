@@ -36,7 +36,7 @@ export default {
 		grid-gap: var(--gap-big);
 		padding-bottom: var(--bottom-small);
 		font-size: var(--body);
-		background-color: #fdfcfb;
+		background-color: #fffefe;
 		margin-top: var(--top-large);
 	}
 	.footer__title {

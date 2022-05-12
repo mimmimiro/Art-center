@@ -28,14 +28,36 @@
 		this.fetchNew();
 	},
 
+	//  an asynchronous HTTP request in JavaScript/vue with the deconstructed fetch method
 	methods: {
 		async fetchNew() {
 			const url = 'https://randomuser.me/api/';
-			const res = await fetch(url);
-			const { results }   = await res.json();
+			const response = await fetch(url);
+		try {
+			await this.handleResponse(response)
+
+			// The catch() function is only used if fetch() could not send a request. This typically means that there was an error
+		} catch(error) {
+			console.log(error)
+			this.error = error;
+		}
+		},
+		async handleResponse(response) {
+			if(response.status >= 200 && response.status < 300) {
+			const { results }   = await response.json();
 			console.log(results);
 			this.name = `${results[0].name.first} ${results[0].name.last}`;
 			this.image = results[0].picture.medium
+			return true;
+			}  else {
+				if(response.status === 404) {
+					throw new Error('Url is not right');
+				}
+				if(response.status === 500) {
+					throw new Error('server not working!');
+				}
+				} 
+				throw new Error ('oh, no! something went wrong')
 		}
 	}
 }

@@ -6,7 +6,9 @@
 				<img class="page__image" :src="project.projectImage.asset.url" :alt="project.title">
 				<div class="page__year">Project year
 					{{ project.year}}</div>
+					<img class="page__image" :src="project.itemImage.asset.url" :alt="project.title">
 				<p class="page__description">{{ project.description }}</p>
+				
 				<p class="page__description">{{ project.about }}</p>
 			</section>
 		</main>
@@ -50,7 +52,7 @@
 	.page__title {
 		color: rgb(58, 82, 92);
 		text-align: center;
-		margin: 10px 0px 10px 10px;
+		margin: 0px 20px 10px 10px;
 		grid-column: 2/ span 2;
 		font-size: 1.9rem;
 	}
@@ -60,12 +62,12 @@
 	}
 	.page__image {
 		width: 30vw;
-		margin-top: var(--top-small);
+		margin-top: 30px;
 	}
 	.page__description {
 		font-size: var(--body);
 		grid-column: 2/ span 10;
-		margin: 20px 20px 0px 20px;
+		margin: 15px 20px 0px 20px;
 		text-align: justify;
 		font-size: 1.2rem;
 		line-height: 1.5rem;
