@@ -5,10 +5,10 @@
 				<h3 class="page__title"> {{ project.title}}</h3>
 				<img class="page__image" :src="project.projectImage.asset.url" :alt="project.title">
 				<div class="page__year">Project year
-					{{ project.year}}</div>
+					{{ project.year}}
+				</div>
 					<img class="page__image" :src="project.itemImage.asset.url" :alt="project.title">
 				<p class="page__description">{{ project.description }}</p>
-				
 				<p class="page__description">{{ project.about }}</p>
 			</section>
 		</main>
@@ -20,15 +20,10 @@
 <script>
 	import query from '../groq/projectPage.groq?raw';
 	import viewMixin from '../mixins/viewMixin.js';
-	import Header from '../components/Header.vue';
-	import Footer from '../components/Footer.vue';
-
-
+	
 	export default {
 		mixins: [viewMixin],
 		components: {
-			Header,
-			Footer
 		},
 
 		async created() {
