@@ -67,7 +67,7 @@
 	.card {
 		position: fixed;
 		overflow: hidden;
-		top: 500px;
+		top: 600px;
 	}
 	.card__title {
 		text-align: center;

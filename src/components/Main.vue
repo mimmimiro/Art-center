@@ -5,7 +5,6 @@
 	
 		<Rating  />
 	</main>
-
 </template>
 
 <script>
@@ -23,11 +22,11 @@
 </script>
 <style>
 	.image {
-	 height: 100vh;
-    width: 100vw;
-    background-position:center;
+	 height: 100%;
+    width: 100%; 
+    background-position: right;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain, cover;
     background-attachment: fixed;
 	}
 
