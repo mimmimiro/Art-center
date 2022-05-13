@@ -2,16 +2,18 @@
 	<main class="frontpage">
 		<div :style="image" class="image"></div>
 	
-	
+	    <!-- <Slide /> -->
 		<Rating  />
 	</main>
 </template>
 
 <script>
-	import Rating from '../components/Rating.vue'
+	import Rating from '../components/Rating.vue';
+	// import Slide from '../components/Slide.vue';
 	export default {
 		components: {
-			Rating
+			Rating,
+			// Slide
 		},
 		data() {
             return {
