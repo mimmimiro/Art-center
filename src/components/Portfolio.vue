@@ -1,5 +1,4 @@
 <template>
-	<Header />
 		<main class="portfolio">
 			 <!-- project section - all the projects are fetched from Sanity -->
 			<h1 class="portfolio__header">{{ title }}</h1>
@@ -30,22 +29,17 @@
 				</section>
 			</div>
 		</main>
-	<Footer />
 </template>
 
 <script>
    import query from '../groq/project.groq?raw';
 	import viewMixin from '../mixins/viewMixin.js';
 	import Card from './Card.vue';
-	import Header from './Header.vue';
-	import Footer from '../components/Footer.vue';
 
 	export default {
 		mixins: [viewMixin],
 		components: {
 			Card,
-			Header,
-			Footer
 		},
 		data() {
 			return {

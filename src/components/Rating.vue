@@ -3,7 +3,7 @@
 		<card>
 			<div class="card__title">{{ title }}</div>
 			<span class="card__review">{{ review }}</span>
-			<div class="card__image"><img class="image" :src="image"></div>
+			<div ><img class="card__image" :src="image"></div>
 			<span class="name">{{ name }}</span>
 		</card>
 	</main>
@@ -67,6 +67,7 @@
 	.card {
 		position: fixed;
 		overflow: hidden;
+		top: 500px;
 	}
 	.card__title {
 		text-align: center;
@@ -84,8 +85,8 @@
 	.name {
 		font-size: 1rem;
 	}
-	.image {
-		width: 20%;
+	.card__image {
+		width: 30%;
 		border-radius: 50%;
 		border: 1px solid #000;
 	}

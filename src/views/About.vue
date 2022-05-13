@@ -1,5 +1,4 @@
 <template>
-	<Header />
 		<main>
 			<section class="about" v-for="about in result" :key="about">
 				<h2 class="about__title">{{ about.title }}</h2>
@@ -15,21 +14,16 @@
 			</section>
 		</main>
 	<ContactForm />
-	<Footer />
 </template>
 
 <script>
 	import query from '../groq/about.groq?raw';
 	import viewMixin from '../mixins/viewMixin.js';
-	import Header from '../components/Header.vue';
-	import Footer from '../components/Footer.vue';
 	import ContactForm from '../components/ContactForm.vue';
 	
 	export default {
 	  mixins: [viewMixin],
 	  components: {
-		    Header,
-			 Footer,
 			 ContactForm
 	  },
 	  data() {

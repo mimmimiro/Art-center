@@ -39,6 +39,7 @@ export default {
 		background-color: #fffefe;
 		margin-top: var(--top-large);
 	}
+
 	.footer__title {
 		grid-column: 1 / span 1;
 		color: rgb(71, 100, 112);
@@ -48,7 +49,7 @@ export default {
 	
 	.footer__navigation {
 		grid-column: 9 / span 3;
-		padding-top: var(--top-small);
+		/* padding-top: var(--top-small); */
 	}
 	.footer__navigation-icon {
 		width: 20px;
