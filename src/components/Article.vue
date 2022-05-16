@@ -2,6 +2,7 @@
 	<main class="article">
 					<section class="article__container">
 					<section class="article__section" v-for="article in result" :key="article._id">
+						<router-link :to="{ name: 'articlePage', params: { articleSlug: article.slug.current }}">
 				<div class="article__card">
 					<div class="article__card-inner">
 						<div class="article__card-front">
@@ -14,6 +15,7 @@
 					</div>
 				</div>
 			</div>
+			</router-link>
 		</section> 
 	</section>
 </main>
@@ -53,8 +55,8 @@
 
 	.article__card {
 	background-color: transparent;
-	width: 300px;
-	height: 300px;
+	width: 400px;
+	height: 400px;
 	border-radius: 12px;
 	margin: 2rem 1rem;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
@@ -64,8 +66,8 @@
 	top: 260px; 
 	}
 	.article__image {
-		width: 300px;
-		height: 300px;
+		width: 400px;
+		height: 400px;
 		object-fit: cover;
 	}
 
@@ -93,13 +95,11 @@
 	backface-visibility: hidden;
 	}
 
-	/* Style the front side (fallback if image is missing) */
 	.article__card-front {
 	background-color: #bbb;
 	color: black;
 	}
 
-	/* Style the back side */
 	.article__card-back {
 	background-color: rgb(249, 247, 241);
 	color: rgb(71, 100, 112);

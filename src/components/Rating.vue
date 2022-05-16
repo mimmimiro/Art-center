@@ -1,10 +1,10 @@
 <template>
 	<main class="card">
-		<card>
+		<card class="card__box">
 			<div class="card__title">{{ title }}</div>
 			<span class="card__review">{{ review }}</span>
 			<div ><img class="card__image" :src="image"></div>
-			<span class="name">{{ name }}</span>
+			<span class="name">-{{ name }}</span>
 		</card>
 	</main>
 </template>
@@ -47,7 +47,7 @@
 			const { results }   = await response.json();
 			console.log(results);
 			this.name = `${results[0].name.first} ${results[0].name.last}`;
-			this.image = results[0].picture.medium
+			this.image = results[0].picture.large
 			return true;
 			}  else {
 				if(response.status === 404) {
@@ -73,20 +73,18 @@
 		text-align: center;
 		color: rgb(71, 100, 112);
 		font-weight: 600;
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 	}
 	.card__review {
 		font-size: 1.2rem;
-	}
-	.card__image {
-		text-align: right;
+		margin-left: 140px;
 	}
 
 	.name {
-		font-size: 1rem;
+		font-size: 1.3rem;
 	}
 	.card__image {
-		width: 30%;
+		width: 35%;
 		border-radius: 50%;
 		border: 1px solid #000;
 	}
