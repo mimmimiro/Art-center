@@ -13,6 +13,6 @@
 	--top-large: 30px;
 
 	/* grid */
-	--gap-big: 10px;
+	--gap-big: 4px;
 	--grid-column-12: repeat(12, 1fr);
 }

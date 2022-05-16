@@ -1,0 +1,9 @@
+*[slug.current == $slug] {
+  ...,
+  
+  articleImage {
+      asset-> { url }
+  },   
+  
+  
+}
