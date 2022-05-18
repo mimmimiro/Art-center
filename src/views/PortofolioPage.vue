@@ -74,10 +74,13 @@
 		.page__description {
 			font-size: 0.8rem;
 			grid-column: 1/ span 12;
-			margin: 15px;
+			margin: 10px 45px;
 		}
 		.page__item {
 			grid-column: 10/ span 3;
+		}
+		.page__image {
+			grid-column: 1/ span 2;
 		}
 
 	}

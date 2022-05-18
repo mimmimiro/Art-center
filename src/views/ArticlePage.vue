@@ -76,7 +76,7 @@
 	.articlePage__description {
 		grid-column: 1/ span 12;
 		font-size: 0.8rem;
-		margin: 15px;
+		margin: 15px 35px;
 	}
 	.articlePage__title {
 		grid-column: 3/ span 7;
