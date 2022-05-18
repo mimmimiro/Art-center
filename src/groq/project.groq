@@ -5,6 +5,7 @@
 	projectCaption,
 	year,
 	href,
+	quote,
 	slug,
    
   category-> {

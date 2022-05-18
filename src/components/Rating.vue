@@ -1,6 +1,6 @@
 <template>
 	<main class="card">
-		<card class="card__box">
+		<card class="card__box" aria-label="customer review">
 			<div class="card__title">{{ title }}</div>
 			<span class="card__review">{{ review }}</span>
 			<div ><img class="card__image" :src="image"></div>
@@ -68,25 +68,44 @@
 		position:sticky;
 		overflow: hidden;
 		top: 650px;
+		
 	}
 	.card__title {
 		text-align: center;
 		color: rgb(71, 100, 112);
 		font-weight: 600;
 		font-size: 1.6rem;
+		margin: 15px;
+		padding-top: 15px;
 	}
 	.card__review {
 		font-size: 1.2rem;
-		margin-left: 140px;
+		margin: 15px 0px 10px 140px;
 	}
 
 	.name {
 		font-size: 1.3rem;
+		margin-left: 20px;
 	}
 	.card__image {
-		width: 35%;
+		width: 45%;
 		border-radius: 50%;
 		border: 1px solid #000;
+		margin: 30px 0px 0px 30px;
+	}
+	/* Small and medium screen devices  */
+   @media screen and (max-width: 1024px) {
+		.card__image,
+		.card__review,
+		.name,
+		.card__title {
+			margin: 0px;
+			padding: 0px;
+		}
+		.card {
+			height: 25vh;
+			width: 30vw;
+		}
 	}
 
 </style>

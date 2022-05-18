@@ -6,7 +6,6 @@
 				<RouterLink class="header__navigation-link" :to="{ name: 'home' }">Home</RouterLink>
 				<RouterLink class="header__navigation-link" :to="{ name: 'portfolio' }">Projects</RouterLink>
 			   <RouterLink class="header__navigation-link" :to="{ name: 'about' }">About</RouterLink>
-				<!-- <RouterLink class="header__navigation-link" :to="{ name: 'contact' }">Contact</RouterLink>  -->
 			</nav>
 		</header>	
 	</section>
@@ -41,14 +40,14 @@
 	}
 	.header__navigation-link {
 		text-decoration: none;
-		color: rgb(71, 100, 112);
+		color: black;
 		font-weight: 600;
 		font-size: 1.5rem;
 		padding: 20px;
 	}
 	.header__navigation-link:hover,
 	.header__navigation-link:focus {
-		color: 633930;
+		color:darkgoldenrod;
 	}
 	
 	.container__header-logo {

@@ -15,19 +15,27 @@
 							<option valeu="painting">Painting</option>
 							<option valeu="Graphics">Graphics</option>
 					</select>
+					<p class="category__quote">"Art is not what you see, but what you make others see."</p>
 				<section class="project">
 					<section  v-for="project in result" :key="project._id">
+						<router-link :to="{ name: 'portofolioPage', params: { projectSlug: project.slug.current }}">
 						<card class="project__card">
-							<router-link :to="{ name: 'portofolioPage', params: { projectSlug: project.slug.current }}">	
-								<button class="project__button">
-									<img class="project__image" :src="project.projectImage.asset.url" :alt="project.title"> 
-									<h3 class="project__title"> {{ project.title}}</h3>
-								</button>
-					    	</router-link>
+							<section class="project__card-inner">
+								<figure class="project__card-front">
+									<img class="project__image" :src="project.projectImage.asset.url" :alt="project.title">
+									</figure>
+									<div class="project__card-back">
+						<h2 class="project__card-back-title">{{project.title }}</h2>
+						<p class="project__card-text">{{ project.quote }}</p>
+						
+					</div>
+					    </section>
 						</card>
+							</router-link>
 					</section>
 				</section>
 			</div>
+			<div :style="image" class="image"></div>
 		</main>
 </template>
 
@@ -43,6 +51,7 @@
 		},
 		data() {
 			return {
+				image: {backgroundImage: "url(./images/back.png)"},
 				title: 'Our projects',
 				result: [],
 				category: ''
@@ -66,29 +75,48 @@
 
 <style>
 	.portfolio {
-		background-color: rgb(249, 247, 241);
+		background-color: white;
 		width: 100%;
 	}
 	.portfolio__text {
 		font-size: 1.2rem;
 		margin: 10px 40px 10px 40px;
+		text-align: center;
 	}
 	.project {
 		display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: var(--gap-big);
 		margin: var(--outside-margin);
-		margin-top: var(--top-small);
+		margin-top: 60px;
 	}
+	
 	.portfolio__header {
-		color: rgb(71, 100, 112);
 		text-align: center;
 		font-size: 1.9rem;
+	}
+	.project__card-inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transition: transform 0.8s;
+		transform-style: preserve-3d;
 	}
 	.category { 
 		margin: 0px 5px 0px 40px;
 		padding-top: 10px;
 		font-size: 1.2rem;
+		font-weight: bold;
+	}
+	.category__quote {
+		top: 120px;
+		position: fixed;
+		overflow: hidden;
+		margin: 260px 0px 400px 350px;
+		text-align: center;
+		font-size: 1.6rem;
+		font-family: cursive;
 	}
 	.category__dropdown {
 		border-radius: 7px;
@@ -98,16 +126,52 @@
 	}
 	
 	.project__image {
-		width: 300px;
-		height: 300px;
+		width: 380px;
+		height: 380px;
 		object-fit: cover;
+	}
+	.project__card {
+		border-radius: 12px;
 	}
 	.project__title {
 		color: rgb(71, 100, 112);
 	}
-	 .project__card:hover {
-		transform: scale(1.1);
-	} 
+	/*horizontal flip when you move the mouse over the flip box container */
+	.project__card:hover .project__card-inner {
+		transform: rotateY(180deg);
+	}
+
+	/* Position the front and back side */
+	.project__card-front, .project__card-back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden; 
+		backface-visibility: hidden;
+	}
+
+	.project__card-front {
+		background-color: #bbb;
+		color: black;
+	}
+
+	.project__card-back {
+		background-color: rgb(249, 247, 241);
+		color: black;
+		transform: rotateY(180deg);
+	}
+	.project__card-back-title {
+		margin: 15px;
+	}
+	.image {
+	 height: 60%;
+    width: 100%; 
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+	}
+	
 	/* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {
       .portofolio {
@@ -115,7 +179,21 @@
    	}  
 		.project {
 			grid-template-columns: repeat(2, 1fr);
+			margin-left: 40px;
 		}
+		.image {
+			width: 100%; 
+			height: 20%;
+			background-size: cover;
+		}
+		.category__quote {
+			margin: 800px 0px 5px 90px;
+		}
+		.portfolio__text {
+		font-size: 0.8rem;
+		margin: 10px 40px 10px 40px;
+		text-align: center;
+	}
 	}
 
 	

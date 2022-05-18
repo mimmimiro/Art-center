@@ -2,19 +2,19 @@
 	<main class="article">
 					<section class="article__container">
 					<section class="article__section" v-for="article in result" :key="article._id">
-						<router-link :to="{ name: 'articlePage', params: { articleSlug: article.slug.current }}">
-				<div class="article__card">
-					<div class="article__card-inner">
-						<div class="article__card-front">
+			<router-link :to="{ name: 'articlePage', params: { articleSlug: article.slug.current }}">
+				<section class="article__card">
+					<section class="article__card-inner">
+						<figure class="article__card-front">
 							<img class="article__image" :src="article.articleImage.asset.url" :alt="article.title" >
-						</div>
-					<div class="article__card-back">
-						<h2>{{article.title }}</h2>
-						<p></p>
+						</figure>
+					   <div class="article__card-back">
+						<h2 class="article__card-back-title">{{article.title }}</h2>
+						<p class="article__card-text">{{ article.quote }}</p>
 						<p></p>
 					</div>
-				</div>
-			</div>
+				 </section>
+				</section>
 			</router-link>
 		</section> 
 	</section>
@@ -54,16 +54,16 @@
 	}
 
 	.article__card {
-	background-color: transparent;
-	width: 400px;
-	height: 400px;
-	border-radius: 12px;
-	margin: 2rem 1rem;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-	perspective: 1000px; 
-	/* position: relative;  */
-	overflow: hidden;
-	top: 260px; 
+		background-color: transparent;
+		width: 400px;
+		height: 400px;
+		border-radius: 12px;
+		margin: 2rem 1rem;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+		perspective: 1000px; 
+		/* position: relative;  */
+		overflow: hidden;
+		top: 260px; 
 	}
 	.article__image {
 		width: 400px;
@@ -71,38 +71,51 @@
 		object-fit: cover;
 	}
 
-	/* This container is needed to position the front and back side */
 	.article__card-inner {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transition: transform 0.8s;
+		transform-style: preserve-3d;
 	}
 
-	/* Do an horizontal flip when you move the mouse over the flip box container */
+	/*horizontal flip when you move the mouse over the flip box container */
 	.article__card:hover .article__card-inner {
-	transform: rotateY(180deg);
+		transform: rotateY(180deg);
 	}
 
 	/* Position the front and back side */
 	.article__card-front, .article__card-back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-backface-visibility: hidden; 
-	backface-visibility: hidden;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden; 
+		backface-visibility: hidden;
 	}
 
 	.article__card-front {
-	background-color: #bbb;
-	color: black;
+		background-color: #bbb;
+		color: black;
 	}
 
 	.article__card-back {
-	background-color: rgb(249, 247, 241);
-	color: rgb(71, 100, 112);
-	transform: rotateY(180deg);
+		background-color: rgb(249, 247, 241);
+		color: black;
+		transform: rotateY(180deg);
+	}
+	.article__card-back-title {
+		margin: 15px;
+	}
+		/* Small and medium screen devices  */
+   @media screen and (max-width: 1024px) {
+      .article {
+          width: 100%;          
+   	}  
+		.article__container {
+			grid-template-columns: repeat(2, 1fr);
+			margin-left: 40px;
+		}
+
 	}
 </style>

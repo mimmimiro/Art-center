@@ -51,7 +51,7 @@
 		color: rgb(58, 82, 92);
 		text-align: center;
 		margin: 10px 0px 10px 10px;
-		grid-column: 4/ span 2;
+		grid-column: 4/ span 4;
 	}
 	.about__article {
 		font-size: var(--body);
@@ -63,6 +63,7 @@
 	.about__image {
 		width: 30vw;
 		margin: 10px 0px 10px 10px;
+		grid-column: 3/ span 5;
 	}
 	.about__contact-title {
 		color: #2e3402;

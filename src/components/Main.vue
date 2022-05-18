@@ -52,6 +52,22 @@
     background-size: cover;
     background-attachment: fixed;
 	}
+	/* Small and medium screen devices  */
+   @media screen and (max-width: 1024px) {
+		.frontpage__header {
+			margin: 20px 0px 20px 260px;
+		}
+		.image {
+			height: 20%;
+			width: 100%;
+			background-size: cover;
+		}
+		.frontpage__text {
+			font-size: 1.4rem;
+			margin: 40px 50px 15px 80px;
+			text-align: center;
+		}
+	}
 
 	
 	

@@ -70,7 +70,7 @@ export default {
    /* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {
 		.footer__navigation {
-			grid-column: 8 / span 4;
+			grid-column: 6 / span 4;
 		}
 	}
 </style>
