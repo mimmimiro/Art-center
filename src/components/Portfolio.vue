@@ -2,39 +2,38 @@
 		<main class="portfolio">
 			 <!-- project section - all the projects are fetched from Sanity -->
 			<h1 class="portfolio__header">{{ title }}</h1>
-			<p class="portfolio__text">Featuring detailed projects of artwork, these projects contain a wealth of knowledge about ideas explored, artists studied and artistic techniques and processes used, making them valuable learning tools for others.
-				<br>
-				<br>
-				What makes our projects unique and different is our innovative approach to an art form and design element. We specialize in customized with a focus on interior design and art enhancement. We offer high quality picture framing with an attention to detail that is reflected in each new piece whether it be an individual art piece or multiple pieces for entire hotel project.
-			</p>
+				<p class="portfolio__text">Featuring detailed projects of artwork, these projects contain a wealth of knowledge about ideas explored, artists studied and artistic techniques and processes used, making them valuable learning tools for others.
+					<br>
+					<br>
+					What makes our projects unique and different is our innovative approach to an art form and design element. We specialize in customized with a focus on interior design and art enhancement. We offer high quality picture framing with an attention to detail that is reflected in each new piece whether it be an individual art piece or multiple pieces for entire hotel project.
+				</p>
 			<div v-if="loading">Loading....</div>
-			<div v-else>
-					<span class="category">Choose category</span> 
-					<select class="category__dropdown" v-model="category">
-							<option valeu="Ceramic">Ceramic</option>
-							<option valeu="painting">Painting</option>
-							<option valeu="Graphics">Graphics</option>
-					</select>
-					<p class="category__quote">"Art is not what you see, but what you make others see."</p>
-				<section class="project">
-					<section  v-for="project in result" :key="project._id">
-						<router-link :to="{ name: 'portofolioPage', params: { projectSlug: project.slug.current }}">
-						<card class="project__card">
-							<section class="project__card-inner">
-								<figure class="project__card-front">
-									<img class="project__image" :src="project.projectImage.asset.url" :alt="project.title">
-									</figure>
-									<div class="project__card-back">
-						<h2 class="project__card-back-title">{{project.title }}</h2>
-						<p class="project__card-text">{{ project.quote }}</p>
-						
-					</div>
-					    </section>
-						</card>
+				<div v-else>
+						<span class="category">Choose category</span> 
+							<select class="category__dropdown" v-model="category">
+									<option valeu="Ceramic">Ceramic</option>
+									<option valeu="painting">Painting</option>
+									<option valeu="Graphics">Graphics</option>
+							</select>
+							<p class="category__quote">"Art is not what you see, but what you make others see."</p>
+					<section class="project">
+						<section  v-for="project in result" :key="project._id">
+							<router-link :to="{ name: 'portofolioPage', params: { projectSlug: project.slug.current }}">
+								<card class="project__card">
+									<section class="project__card-inner">
+										<figure class="project__card-front">
+											<img class="project__image" :src="project.projectImage.asset.url" :alt="project.title">
+										</figure>
+											<div class="project__card-back">
+											<h2 class="project__card-back-title">{{project.title }}</h2>
+											<p class="project__card-text">{{ project.quote }}</p>
+											</div>
+								</section>
+								</card>
 							</router-link>
+						</section>
 					</section>
-				</section>
-			</div>
+				</div>
 			<div :style="image" class="image"></div>
 		</main>
 </template>
@@ -61,7 +60,6 @@
 		computed: {
 			 result(){
                 return this.result.filter(project => !project.category.type.indexOf(this.category))
-			 
 		}
 		},
 		// grog query, to fetch information from sanity studio
