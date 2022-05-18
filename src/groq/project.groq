@@ -6,6 +6,7 @@
 	year,
 	href,
 	quote,
+	subtitle,
 	slug,
    
   category-> {

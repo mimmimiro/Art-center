@@ -8,6 +8,7 @@
 				</div>
 					<img class="page__item" :src="project.itemImage.asset.url" :alt="project.title">
 				<p class="page__description">{{ project.description }}</p>
+				<h2 class="page__subtitle">{{ project.subTitle}}</h2>
 				<p class="page__description">{{ project.about }}</p>
 			</section>
 		</main>
@@ -60,6 +61,11 @@
 	.page__item {
 		width: 30vw;
 		margin: 20px;
+	}
+	.page__subtitle {
+		font-weight: 600;
+		margin: 20px;
+		grid-column: 2/ span 9;
 	}
 	.page__description {
 		font-size: var(--body);

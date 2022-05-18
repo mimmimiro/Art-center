@@ -61,6 +61,7 @@
 			height: 20%;
 			width: 100%;
 			background-size: cover;
+			/* display: none; */
 		}
 		.frontpage__text {
 			font-size: 1.4rem;

@@ -10,10 +10,10 @@
 </template>
 
 <script>
-	import Card from '../components/Card.vue'
+	// import Card from '../components/Card.vue'
 	export default {
 		components: {
-			Card
+			// Card
 		},
 		name: 'home',
 	data() {
@@ -67,20 +67,25 @@
 	.card {
 		position:sticky;
 		overflow: hidden;
-		top: 650px;
+		/* top: 550px; */
+		width: 20%;
+		height: 35%;
+		border-radius: 12px;
+		margin: 1rem 1rem;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 		
 	}
 	.card__title {
 		text-align: center;
 		color: rgb(71, 100, 112);
 		font-weight: 600;
-		font-size: 1.6rem;
-		margin: 15px;
-		padding-top: 15px;
+		font-size: 1.5rem;
+		margin: 5px;
+		padding-top: 10px;
 	}
 	.card__review {
 		font-size: 1.2rem;
-		margin: 15px 0px 10px 140px;
+		margin: 5px 0px 10px 70px;
 	}
 
 	.name {
@@ -91,20 +96,18 @@
 		width: 45%;
 		border-radius: 50%;
 		border: 1px solid #000;
-		margin: 30px 0px 0px 30px;
+		margin: 20px 0px 0px 30px;
 	}
 	/* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {
-		.card__image,
-		.card__review,
-		.name,
-		.card__title {
-			margin: 0px;
-			padding: 0px;
-		}
+		
 		.card {
-			height: 25vh;
-			width: 30vw;
+			height: 15%;
+			width: 25%;
+		}
+		.card__review,
+		.card__title {
+			margin-left: 10px;
 		}
 	}
 

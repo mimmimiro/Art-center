@@ -5,14 +5,14 @@
 </template>
 
 <script>
-export default {
-	
-}
+	export default {
+		
+	}
 </script>
 
 <style scoped>
-div {
-  background-color: transparent;
+	div {
+		background-color: transparent;
 		width: 380px;
 		height: 380px;
 		border-radius: 12px;
@@ -20,5 +20,5 @@ div {
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 		perspective: 1000px; 
 		overflow: hidden;
-}
+	}
 </style>
