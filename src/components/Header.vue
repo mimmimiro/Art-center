@@ -66,6 +66,10 @@
       .container__header-logo {
           grid-column: 1 / span 2;             
    	}  
+		.header__navigation-link {
+			font-size: 1.6rem;
+		}
+
 	}
    
 </style>

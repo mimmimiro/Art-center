@@ -78,7 +78,7 @@
 	/* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {
 		.page__description {
-			font-size: 0.8rem;
+			font-size: 1rem;
 			grid-column: 1/ span 12;
 			margin: 10px 45px;
 		}

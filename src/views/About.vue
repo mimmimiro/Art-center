@@ -48,7 +48,7 @@
 		margin: var(--outside-margin);
 	}
 	.about__title {
-		color: rgb(58, 82, 92);
+		color: black;
 		text-align: center;
 		margin: 10px 0px 10px 10px;
 		grid-column: 4/ span 4;
@@ -69,6 +69,18 @@
 		color: #2e3402;
 		text-align: center;
 		margin: 0px 0px 10px 0px;
+	}
+	/* Small and medium screen devices  */
+   @media screen and (max-width: 1024px) {
+		.about__title {
+			grid-column: 2/ span 10;
+		}
+		.about__article {
+			grid-column: 1/ span 12;
+			margin: 15px;
+			font-size: 1rem;
+		}
+
 	}
 	
 </style>

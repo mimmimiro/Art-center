@@ -1,11 +1,11 @@
 <template>
 	<main class="card">
-		<card class="card__box" aria-label="customer review">
+		<section class="card__box" aria-label="customer review">
 			<div class="card__title">{{ title }}</div>
 			<span class="card__review">{{ review }}</span>
 			<div ><img class="card__image" :src="image"></div>
 			<span class="name">-{{ name }}</span>
-		</card>
+		</section>
 	</main>
 </template>
 
@@ -103,12 +103,13 @@
 		
 		.card {
 			height: 15%;
-			width: 25%;
+			width: 20%;
 		}
 		.card__review,
 		.card__title {
 			margin-left: 10px;
 		}
 	}
+	
 
 </style>

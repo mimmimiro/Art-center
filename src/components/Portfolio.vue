@@ -187,10 +187,10 @@
 			background-size: cover;
 		}
 		.category__quote {
-			margin: 800px 0px 5px 90px;
+			margin: 1100px 0px 5px 90px;
 		}
 		.portfolio__text {
-		font-size: 0.8rem;
+		font-size: 1rem;
 		margin: 10px 40px 10px 40px;
 		text-align: center;
 	}
