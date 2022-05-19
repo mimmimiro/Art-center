@@ -185,7 +185,7 @@
 			background-size: cover;
 		}
 		.category__quote {
-			margin: 1100px 0px 5px 90px;
+			display: none;
 		}
 		.portfolio__text {
 		font-size: 1rem;
