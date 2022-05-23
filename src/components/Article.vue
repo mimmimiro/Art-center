@@ -116,6 +116,14 @@
 			grid-template-columns: repeat(2, 1fr);
 			margin-left: 40px;
 		}
+		.article__card-back {
+			background-color: rgb(249, 247, 241);
+			color: black;
+			transform: rotateY(180deg);
+		}
+		.article__card:hover .article__card-inner {
+			transform: rotateY(180deg);
+		}
 
 	}
 </style>

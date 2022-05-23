@@ -56,6 +56,7 @@
    @media screen and (max-width: 1024px) {
 		.frontpage__header {
 			margin: 20px 0px 20px 260px;
+			position: fixed;
 		}
 		.image {
 			height: 20%;
@@ -67,6 +68,7 @@
 			font-size: 1.4rem;
 			margin: 40px 50px 15px 80px;
 			text-align: center;
+			position: fixed;
 		}
 	}
 
