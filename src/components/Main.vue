@@ -32,7 +32,7 @@
 		top: 120px;
 		position: fixed;
 		overflow: hidden;
-		margin: 20px 0px 20px 460px;
+		margin: 20px 0px 20px 470px;
 		text-align: center;
 		font-size: 1.9rem;
 	}
@@ -40,7 +40,7 @@
 		top: 140px;
 		position: fixed;
 		overflow: hidden;
-		margin: 40px 200px 20px 40px;
+		margin: 40px 200px 20px 130px;
 		text-align: center;
 		font-size: 1.4rem;
 	}

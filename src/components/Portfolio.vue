@@ -78,8 +78,8 @@
 	}
 	.portfolio__text {
 		font-size: 1.2rem;
-		margin: 10px 40px 10px 40px;
-		text-align: center;
+		margin: 10px 120px 10px 120px;
+		text-align:justify;
 	}
 	.project {
 		display: grid;
@@ -102,7 +102,7 @@
 		transform-style: preserve-3d;
 	}
 	.category { 
-		margin: 0px 5px 0px 40px;
+		margin: 0px 5px 0px 120px;
 		padding-top: 10px;
 		font-size: 1.2rem;
 		font-weight: bold;
@@ -111,7 +111,7 @@
 		top: 120px;
 		position: fixed;
 		overflow: hidden;
-		margin: 260px 0px 400px 350px;
+		margin: 280px 0px 400px 350px;
 		text-align: center;
 		font-size: 1.6rem;
 		font-family: cursive;

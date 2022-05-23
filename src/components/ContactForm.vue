@@ -2,7 +2,10 @@
 	<form class="contact">
 				<h1 class="contact__title">Contact Us</h1>
 					<input class="contact__input" type="name" placeholder="Name" v-model="name" />
-					<input class="contact__input" type="email" placeholder="E-mail" v-model="email" />
+					<div class="contact__validate" :class="{invalid: emailValidity === 'invalid'}">
+					<input class="contact__validate-email" type="email" placeholder="E-mail" v-model="email" @blur="validateInput"/>
+					<p v-if="emailValidity === 'invalid'">Please enter a valid email!</p>
+					</div>
 					<input class="contact__message" type="message" placeholder="Message" v-model="message" />
 		      <button class="contact__button" @click="submitForm">Submit</button>
 	  		</form>
@@ -14,8 +17,18 @@
 		  return {
 			  name: '',
 			  email: '',
-			  message: ''
+			  message: '',
+			  emailValidity: ''
 		  }
+	  },
+	  methods: {
+		  validateInput() {
+				if (this.email === '') {
+				this.emailValidity = 'invalid';
+				} else {
+				this.emailValidity = 'valid';
+				}
+    		}
 	  }
 	}
 </script>
@@ -73,4 +86,19 @@
 		background: #276448;
 		border: solid 1px #276448;
 		}
+	.contact__validate-email {
+		border: 1px solid black;
+		color: black;
+		padding: 10px 10px;
+		font-size: 0.9em;
+		margin-bottom: 0.8em;
+		font-weight: bold;
+		width: 400px;
+		border-radius: 7px;
+		margin: 5px 0px 5px 0px;
+	}
+
+	.contact__validate.invalid input {
+ 		 border-color: red;
+	}
 </style>
