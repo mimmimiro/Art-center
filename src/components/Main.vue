@@ -4,6 +4,7 @@
 				<p class="frontpage__text">{{ about }}</p>
 		<Article />
 		<div :style="image" class="image"></div>
+		<Slide />
 		<Rating  />
 	</main>
 </template>
@@ -11,11 +12,13 @@
 <script>
 	import Rating from '../components/Rating.vue';
 	import Article from '../components/Article.vue';
+	import Slide from '../components/Slide.vue';
 	
 	export default {
 		components: {
 			Rating,
-			Article
+			Article,
+			Slide
 			
 		},
 		data() {
@@ -30,7 +33,7 @@
 <style>
 	.frontpage__header {
 		top: 120px;
-		position: fixed;
+		position: absolute;
 		overflow: hidden;
 		margin: 20px 0px 20px 470px;
 		text-align: center;
@@ -38,7 +41,7 @@
 	}
 	.frontpage__text {
 		top: 140px;
-		position: fixed;
+		position: absolute;
 		overflow: hidden;
 		margin: 40px 200px 20px 130px;
 		text-align: center;
@@ -46,7 +49,7 @@
 	}
 	.image {
 	 height: 60%;
-    width: 100%; 
+    width: 100vw; 
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,7 +59,7 @@
    @media screen and (max-width: 1024px) {
 		.frontpage__header {
 			margin: 20px 0px 20px 260px;
-			position: fixed;
+			position: absolute;
 		}
 		.image {
 			height: 20%;
@@ -68,7 +71,7 @@
 			font-size: 1.4rem;
 			margin: 40px 50px 15px 80px;
 			text-align: center;
-			position: fixed;
+			position: absolute;
 		}
 	}
 

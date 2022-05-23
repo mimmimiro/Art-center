@@ -4,6 +4,7 @@ import Portfolio from './components/Portfolio.vue';
 import About from './views/About.vue';
 import ContactForm from './components/ContactForm.vue';
 import ArticlePage from './views/ArticlePage.vue';
+import Slide from './components/Slide.vue';
 
 export default [
 	{ 
@@ -15,6 +16,11 @@ export default [
 		name: 'about', 
 		path: '/About', 
 		component: About
+	},
+	{ 
+		name: 'Slide', 
+		path: '/Slide', 
+		component: Slide
 	},
 	
 	{ 

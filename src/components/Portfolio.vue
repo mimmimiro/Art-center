@@ -162,12 +162,12 @@
 		margin: 15px;
 	}
 	.image {
-	 height: 60%;
-    width: 100%; 
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+		height: 60%;
+		width: 100%; 
+		background-position: right;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
 	}
 	
 	/* Small and medium screen devices  */
@@ -188,9 +188,9 @@
 			display: none;
 		}
 		.portfolio__text {
-		font-size: 1rem;
-		margin: 10px 40px 10px 40px;
-		text-align: center;
+			font-size: 1rem;
+			margin: 10px 40px 10px 40px;
+			text-align: center;
 	}
 	}
 
