@@ -18,7 +18,7 @@
 			  name: '',
 			  email: '',
 			  message: '',
-			  emailValidity: ''
+			  emailValidity: null
 		  }
 	  },
 	  methods: {
