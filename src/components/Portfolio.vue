@@ -192,9 +192,9 @@
 			display: none;
 		}
 		.portfolio__text {
-			font-size: 1rem;
+			font-size: 0.8rem;
 			margin: 10px 40px 10px 40px;
-			text-align: center;
+			text-align: justify;
 	}
 	}
 
