@@ -198,6 +198,7 @@
 		}
 		.category {
 			font-size: 0.8rem;
+			margin-top: 15px;
 		}
 	}
 
