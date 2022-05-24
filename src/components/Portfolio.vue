@@ -12,7 +12,7 @@
 				<div v-else>
 						<span class="category">Choose category</span> 
 							<select class="category__dropdown" v-model="category">
-									<option valeu="Ceramic">Ceramic</option>
+									<option  valeu="Ceramic">Ceramic</option>
 									<option valeu="painting">Painting</option>
 									<option valeu="Graphics">Graphics</option>
 							</select>
