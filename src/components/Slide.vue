@@ -33,6 +33,7 @@
 				timer: null
 			}
 		},
+		// grog query, to fetch information from sanity studio
 		async created() {
 			await this.sanityFetch(query, {
 				type: 'artists' 

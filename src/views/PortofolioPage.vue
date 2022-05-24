@@ -1,5 +1,6 @@
 <template>
 		<main>
+			<!-- created projectpage based on each project slug -->
 			<section v-for="project in result" :key="project._id" class="page">
 				<h3 class="page__title"> {{ project.title}}</h3>
 				<img class="page__image" :src="project.projectImage.asset.url" :alt="project.caption">
@@ -24,7 +25,7 @@
 		mixins: [viewMixin],
 		components: {
 		},
-
+		// grog query, to fetch information from sanity studio
 		async created() {
 			await this.sanityFetch(query, { 
 				slug: this.$route.params.projectSlug

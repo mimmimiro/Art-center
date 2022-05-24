@@ -1,5 +1,6 @@
 <template>
 		<main>
+			<!-- created articlepage based on each article slug -->
 			<section v-for="article in result" :key="article._id" class="articlePage">
 				<h3 class="articlePage__title"> {{ article.title}}</h3>
 				<img class="articlePage__image" :src="article.articleImage.asset.url" :alt="article.caption">
@@ -21,10 +22,10 @@
 		mixins: [viewMixin],
 		components: {
 		},
-
+		// grog query, to fetch information from sanity studio
 		async created() {
 			await this.sanityFetch(query, { 
-				slug: this.$route.params.articleSlug
+				slug: this.$route.params.articleSlug   
 			});
 			this.metaTags({
 				title: this.result.title,
