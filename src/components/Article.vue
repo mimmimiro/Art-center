@@ -1,5 +1,6 @@
 <template>
 	<main class="article">
+					<!-- All the projects fetched and dynamic routing to indivdual project -->
 					<section class="article__container">
 					<section class="article__section" v-for="article in result" :key="article._id">
 			<router-link :to="{ name: 'articlePage', params: { articleSlug: article.slug.current }}">
@@ -30,7 +31,6 @@
 
 		data() {
 			return {
-				
 				result: [],
 			}
 		},

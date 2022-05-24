@@ -1,8 +1,7 @@
 <template>
 		<section class="slideshow">
 			<h2 class="slideshow__container-title">{{ caption }}</h2>
-			<section class="slideshow__container" v-for="slide, index in result"
-					:key="slide._id">
+			<section class="slideshow__container" v-for="slide, index in result" :key="slide._id">
 				<figure>
 					<img class="slideshow__container-image"
 					:src="slide.artistImage.asset.url"
@@ -11,6 +10,7 @@
 					@mouseover="stopRotation"
 					@mouseout="startRotation"
 					/>
+					<p class="slideshow__container-caption">{{ slide.caption}}</p>
 				</figure>
 			</section>
 	</section>
@@ -29,56 +29,57 @@
 				current: 0,
 				caption: 'The artists!',
 				speed: 3000,
+				result: [],
 				timer: null
 			}
 		},
+		async created() {
+			await this.sanityFetch(query, {
+				type: 'artists' 
+			});
+		},
 		methods: {
+			// methods to stop and start the rotation of the slides, when the mouse hovers over/away from the pictures
 			startRotation() {
 				this.timer = setInterval(this.next, this.speed);
 			},
 
 			stopRotation() {
-				clearTimeout(this.timer);
+				timeout(this.timer);
 				this.timer = null;
 			},
 
 			next() {
-				var current = this.current;
-				var next = current + 1;
+				let current = this.current;
+				let next = current + 1;
 
 				if (next > this.result.length - 1) {
 				next = 0;
 				}
 				this.current = next;
-				this.setActive(this.current);
+				this.makeActive(this.current);
 			},
 
 			previous() {
-				var current = this.current;
-				var previous = current - 1;
+				let current = this.current;
+				let previous = current - 1;
 
 				if (previous < 0) {
-				prev = this.result.length -1;
+				previous = this.result.length -1;
 				}
 
 				this.current = previous;
-				this.setActive(this.current);
+				this.makeActive(this.current);
 			},
 
 			isActive (slide) {
 				return this.current === slide;
 			},
 
-			setActive (slide) {
-				this.current = slide;
+			makeActive (slide) {
+				this.current === slide;
 			},
 			},
-
-			async created() {
-			await this.sanityFetch(query, {
-				type: 'artists' 
-			});
-		},
 
 			mounted  () {
 			this.startRotation();
@@ -104,6 +105,9 @@
 		font-size: 3rem;
 		padding-top: 10px;
 	}
+	.slideshow__container-caption {
+		font-weight: bold;
+	}
 
 	.slideshow__container-image {
 		overflow:visible;
@@ -123,7 +127,6 @@
 	.slideshow__container-image:hover {
 		cursor: pointer;
 	}
-
 	.active {
 		opacity: 1;
 	}
@@ -141,6 +144,11 @@
 		}
 		.slideshow__container-title {
 			padding-top: 190px;
+		}
+		.slideshow__container-caption {
+			padding-top: 120px;
+			margin: 10px;
+			font-weight: bold;
 		}
 	}
 </style>

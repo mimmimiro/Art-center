@@ -1,5 +1,9 @@
 *[_type == $type] | order(title asc) {
-	 ...,
+	 _id,
+  caption,
+  description,
+  slug,
+  title,
    
   artistImage {
 					asset-> {

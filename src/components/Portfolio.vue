@@ -7,6 +7,7 @@
 					<br>
 					What makes our projects unique and different is our innovative approach to an art form and design element. We specialize in customized with a focus on interior design and art enhancement. We offer high quality picture framing with an attention to detail that is reflected in each new piece whether it be an individual art piece or multiple pieces for entire hotel project.
 				</p>
+				<!--The loading appears when problems with fetching from Sanity  -->
 			<div v-if="loading">Loading....</div>
 				<div v-else>
 						<span class="category">Choose category</span> 
@@ -15,8 +16,9 @@
 									<option valeu="painting">Painting</option>
 									<option valeu="Graphics">Graphics</option>
 							</select>
-							<p class="category__quote">"Art is not what you see, but what you make others see."</p>
+							<p class="category__quote">{{ quote }}</p>
 					<section class="project">
+						<!-- All the projects fetched and dynamic routing to indivdual project -->
 						<section  v-for="project in result" :key="project._id">
 							<router-link :to="{ name: 'portofolioPage', params: { projectSlug: project.slug.current }}">
 								<card class="project__card">
@@ -53,7 +55,8 @@
 				image: {backgroundImage: "url(./images/back.png)"},
 				title: 'Our projects',
 				result: [],
-				category: ''
+				category: '',
+				quote: '"Art is not what you see, but what you make others see."'
 			}
 		},
 

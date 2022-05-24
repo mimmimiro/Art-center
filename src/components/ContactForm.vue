@@ -2,6 +2,7 @@
 	<form class="contact">
 				<h1 class="contact__title">Contact Us</h1>
 					<input class="contact__input" type="name" placeholder="Name" v-model="name" />
+					<!-- red alert notice apear, if the email adress is unvalid -->
 					<div class="contact__validate" :class="{invalid: emailValidity === 'invalid'}">
 					<input class="contact__validate-email" type="email" placeholder="E-mail" v-model="email" @blur="validateInput"/>
 					<p v-if="emailValidity === 'invalid'">Please enter a valid email!</p>

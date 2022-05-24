@@ -1,8 +1,0 @@
-*[slug.current == $slug] {
-  ...,
-  
-  artistImage {
-      asset-> { url }
-  },   
-   
-}

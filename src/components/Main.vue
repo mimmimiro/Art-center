@@ -25,7 +25,7 @@
             return {
                 image: {backgroundImage: "url(./images/back.png)"},
 					 title: 'Welcome to the Art Center',
-				about: 'Learn to create. Influence change. This is our mission statement—and our answer to how art and design impact our global society. Part call-to-action. Part promise. All opportunity.',
+					 about: 'Learn to create. Influence change. This is our mission statement—and our answer to how art and design impact our global society. Part call-to-action. Part promise. All opportunity.',
             };
         }
 	}
