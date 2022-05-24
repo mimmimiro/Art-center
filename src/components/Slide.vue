@@ -136,7 +136,7 @@
 	/* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {
 		.slideshow__container-image {
-			width: 70vw;
+			width: 60vw;
 			height: 25vh;
 			top: 1700px;
 			left: 80px;
