@@ -139,7 +139,7 @@
 			width: 60vw;
 			height: 25vh;
 			top: 1700px;
-			left: 80px;
+			left: 160px;
 		}
 		.slideshow {
 			width: 100%;
