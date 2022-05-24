@@ -41,7 +41,7 @@
 	.header__navigation-link {
 		text-decoration: none;
 		color: black;
-		font-weight: 600;
+		font-weight: bold;
 		font-size: 1.5rem;
 		padding: 20px;
 	}
@@ -67,7 +67,8 @@
           grid-column: 1 / span 2;             
    	}  
 		.header__navigation-link {
-			font-size: 1.6rem;
+			font-size: 1.9rem;
+			font-weight: bold;
 		}
 
 	}

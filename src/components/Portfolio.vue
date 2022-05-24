@@ -157,9 +157,10 @@
 	}
 
 	.project__card-back {
-		background-color: rgb(249, 247, 241);
-		color: black;
+		background-color: #f9f7f1;
+		color: #000;
 		transform: rotateY(180deg);
+		padding: 1em;
 	}
 	.project__card-back-title {
 		margin: 15px;

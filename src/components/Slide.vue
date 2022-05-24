@@ -94,8 +94,8 @@
 		align-items: center;
 		justify-content: center;
 		margin: 0;
-		padding: 0;
-		width: 99vw;
+		padding: 10px;
+		width: 100vw;
 		height: 50vh;
 		color: #34495e;
 		background-color: rgb(250, 223, 114);
@@ -108,6 +108,8 @@
 	}
 	.slideshow__container-caption {
 		font-weight: bold;
+		margin: 0;
+		padding: 5px;
 	}
 
 	.slideshow__container-image {
@@ -140,14 +142,14 @@
 			left: 80px;
 		}
 		.slideshow {
-			width: 100vw;
+			width: 100%;
 			height: 20vh;
 		}
 		.slideshow__container-title {
 			padding-top: 190px;
 		}
 		.slideshow__container-caption {
-			padding-top: 120px;
+			padding-top: 130px;
 			margin: 10px;
 			font-weight: bold;
 		}
