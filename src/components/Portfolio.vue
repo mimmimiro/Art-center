@@ -111,7 +111,7 @@
 		font-weight: bold;
 	}
 	.category__quote {
-		top: 120px;
+		top: 130px;
 		position: fixed;
 		overflow: hidden;
 		margin: 280px 0px 400px 350px;
@@ -123,7 +123,7 @@
 		border-radius: 7px;
 		font-size: 1.1rem;
 		background-color: white;
-		padding: 3px;
+		padding: 5px;
 	}
 	
 	.project__image {
@@ -197,7 +197,7 @@
 			text-align: justify;
 		}
 		.category {
-			font-size: 0.8rem;
+			font-size: 1rem;
 			margin-top: 15px;
 		}
 	}
