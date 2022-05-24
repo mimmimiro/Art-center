@@ -77,8 +77,9 @@
 		}
 		.about__article {
 			grid-column: 1/ span 12;
-			margin: 15px;
+			margin: 35px;
 			font-size: 1rem;
+			text-align: justify;
 		}
 
 	}
