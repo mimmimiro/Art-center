@@ -114,7 +114,7 @@
 		top: 130px;
 		position: fixed;
 		overflow: hidden;
-		margin: 280px 0px 400px 350px;
+		margin: 290px 0px 400px 350px;
 		text-align: center;
 		font-size: 1.6rem;
 		font-family: cursive;
