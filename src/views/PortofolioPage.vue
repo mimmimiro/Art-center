@@ -64,7 +64,7 @@
 		margin: 20px;
 	}
 	.page__subtitle {
-		font-weight: 600;
+		font-weight: bold;
 		margin: 20px;
 		grid-column: 2/ span 9;
 	}
@@ -88,6 +88,9 @@
 		}
 		.page__image {
 			grid-column: 1/ span 2;
+		}
+		.page__subtitle {
+			font-weight: bold;
 		}
 
 	}

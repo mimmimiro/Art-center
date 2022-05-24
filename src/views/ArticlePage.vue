@@ -40,6 +40,7 @@
 		grid-template-columns: var(--grid-column-12);
 		column-gap: var(--gap-big);
 		margin: var(--outside-margin);
+		padding-bottom: 100px;
 	}
 	.articlePage__title {
 		color: black;
@@ -70,7 +71,7 @@
 	/* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {
 		.articlePage__subtitle {
-		font-weight: 600;
+		font-weight: 500;
 		margin: 10px;
 		grid-column: 2/ span 11;
 	}
@@ -81,7 +82,9 @@
 	}
 	.articlePage__title {
 		grid-column: 3/ span 7;
-
+	}
+	.articlePage__subtitle {
+		font-weight: bold;
 	}
 
 	}
