@@ -79,6 +79,7 @@
 		grid-column: 1/ span 12;
 		font-size: 0.8rem;
 		margin: 15px 35px;
+		text-align: justify;
 	}
 	.articlePage__title {
 		grid-column: 3/ span 7;
