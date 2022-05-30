@@ -71,12 +71,15 @@ export default {
    @media screen and (max-width: 1024px) {
 		.footer__navigation {
 			grid-column: 6 / span 5;
-			font-size: 0.6rem;
+			font-size: 0.7rem;
+			margin-bottom: 15px;
+			padding-bottom: 15px;
 		}
 		.footer__title {
 			grid-column: 1 / span 1;
 			padding-left: 10px;
-			font-size: 0.6rem;
+			margin-left: 10px;
+			font-size: 0.7rem;
 
 		}
 	}
