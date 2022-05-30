@@ -2,7 +2,7 @@
 		<main>
 			<!-- created projectpage based on each project slug -->
 			<section v-for="project in result" :key="project._id" class="page">
-				<h3 class="page__title"> {{ project.title}}</h3>
+				<h1 class="page__title"> {{ project.title}}</h1>
 				<img class="page__image" :src="project.projectImage.asset.url" :alt="project.caption">
 				<div class="page__year">Project year
 					{{ project.year}}

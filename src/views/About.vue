@@ -1,7 +1,7 @@
 <template>
 		<main>
 			<section class="about" v-for="about in result" :key="about">
-				<h2 class="about__title">{{ about.title }}</h2>
+				<h1 class="about__title">{{ about.title }}</h1>
 					<img class="about__image" :src="about.aboutImage.asset.url" :alt="about.title">
 				<article class="about__article">
 						<p>{{ about.aboutMe}}

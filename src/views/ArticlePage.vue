@@ -2,7 +2,7 @@
 		<main>
 			<!-- created articlepage based on each article slug -->
 			<section v-for="article in result" :key="article._id" class="articlePage">
-				<h3 class="articlePage__title"> {{ article.title}}</h3>
+				<h1 class="articlePage__title"> {{ article.title}}</h1>
 				<img class="articlePage__image" :src="article.articleImage.asset.url" :alt="article.caption">
 				<p class="articlePage__description">{{ article.description }}</p>
 				<h2 class="articlePage__subtitle">{{ article.subtitle}}</h2>
