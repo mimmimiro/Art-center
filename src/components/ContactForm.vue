@@ -1,5 +1,5 @@
 <template>
-	<form class="contact">
+	<form class="contact" aria-label="Contact-form">
 		<h1 class="contact__title">Contact Us</h1>
 			<input class="contact__input" type="name" placeholder="Name" v-model="name" />
 			 <!-- red alert notice apear, if the email adress is unvalid -->

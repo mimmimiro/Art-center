@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="card">
 		<slot></slot>
 	</div>
 </template>
@@ -10,8 +10,8 @@
 	}
 </script>
 
-<style scoped>
-	div {
+<style>
+	.card {
 		background-color: transparent;
 		width: 380px;
 		height: 380px;
