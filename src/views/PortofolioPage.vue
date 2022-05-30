@@ -76,7 +76,7 @@
 		font-size: 1.2rem;
 		line-height: 1.5rem;
 	}
-	/* Small and medium screen devices  */
+	/* Small screen devices  */
    @media screen and (max-width: 1024px) {
 		.page__description {
 			font-size: 0.8rem;
