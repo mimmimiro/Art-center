@@ -78,7 +78,7 @@
 		.about__article {
 			grid-column: 1/ span 12;
 			margin: 35px;
-			font-size: 1rem;
+			font-size: 0.8rem;
 			text-align: justify;
 		}
 
