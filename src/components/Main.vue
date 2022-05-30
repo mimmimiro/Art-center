@@ -3,7 +3,7 @@
 			<h1 class="frontpage__header">{{ title }}</h1>
 				<p class="frontpage__text">{{ about }}</p>
 		<Article />
-		<div :style="image" class="image"></div>
+		<figure :style="image" class="image"></figure>
 		<Slide />
 		<Rating  />
 	</main>
@@ -68,7 +68,7 @@
 			/* display: none; */
 		}
 		.frontpage__text {
-			font-size: 1.4rem;
+			font-size: 1.7rem;
 			margin: 40px 50px 15px 80px;
 			text-align: center;
 			position: absolute;
