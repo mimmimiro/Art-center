@@ -8,6 +8,7 @@
 				<!--The loading appears when problems with fetching from Sanity  -->
 			<div v-if="loading">Loading....</div>
 				<div v-else>
+						<!-- The droplist - possible to filter the prosject after type -->
 						<span class="category">Choose category</span> 
 							<select class="category__dropdown" v-model="category">
 								<option  valeu="Ceramic">Ceramic</option>
