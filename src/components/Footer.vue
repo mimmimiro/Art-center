@@ -3,12 +3,12 @@
 		<div class="footer__title">{{title}}</div>
 		<nav class="footer__navigation">
 			<RouterLink class="footer__navigation-link" :to="{ name: 'about' }">
-				<div class="footer__navigation-social">
+				<figure class="footer__navigation-social">
 					<img class="footer__navigation-link--social" src="/images/flipkart.png" alt="facebook icon"> {{facebook}} 
-					<img src="/images/arrow.png" alt="arrow-icon" class="footer__navigation-icon"></div> 
-				<div class="footer__navigation-social">
+					<img src="/images/arrow.png" alt="arrow-icon" class="footer__navigation-icon"></figure> 
+				<figure class="footer__navigation-social">
 					<img class="footer__navigation-link--social" src="/images/twitter.png" alt="twitter icon"> {{twitter}} 
-					<img src="/images/arrow.png" alt="arrow-icon" class="footer__navigation-icon"></div> 
+					<img src="/images/arrow.png" alt="arrow-icon" class="footer__navigation-icon"></figure> 
 			</RouterLink>
 			<p class="footer__navigation-mail"> {{mail}} </p>
 		</nav>
@@ -70,7 +70,7 @@ export default {
    /* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {
 		.footer__navigation {
-			grid-column: 6 / span 4;
+			grid-column: 6 / span 5;
 		}
 	}
 </style>
