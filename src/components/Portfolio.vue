@@ -36,7 +36,7 @@
 						</section>
 					</section>
 				</div>
-			<div :style="image" class="image"></div>
+			<figure :style="image" class="image"></figure>
 		</main>
 </template>
 
@@ -105,7 +105,7 @@
 		transform-style: preserve-3d;
 	}
 	.category { 
-		margin: 0px 5px 0px 120px;
+		margin: 0px 10px 0px 120px;
 		padding-top: 10px;
 		font-size: 1.2rem;
 		font-weight: bold;
@@ -197,8 +197,8 @@
 			text-align: justify;
 		}
 		.category {
-			font-size: 1rem;
-			margin-top: 15px;
+			font-size: 2rem;
+			margin: 35px 20px 10px 35px;
 		}
 	}
 
