@@ -36,15 +36,15 @@ export default {
 		grid-gap: var(--gap-big);
 		padding-bottom: var(--bottom-small);
 		font-size: var(--body);
-		background-color: #fffefe;
+		background-color: var(--main-background);
 		margin-top: var(--top-large);
 	}
 
 	.footer__title {
 		grid-column: 1 / span 1;
-		color: rgb(71, 100, 112);
-		padding-left: 10px;
-		padding-top: var(--top-small);
+		color: var(--foreground);
+		padding-left: var(--left-small);
+		padding-top: var(--top-medium);
 	}
 	
 	.footer__navigation {
@@ -56,16 +56,16 @@ export default {
 	}
 	.footer__navigation-link {
 		text-decoration: none;
-		color: 276448;
+		color: var(--foreground);
 	}
 	.footer__navigation-link--social {
 		width: 20px;
-		color: rgb(71, 100, 112);
+		color: var(--foreground);
 	}
 	
 	.footer__navigation-mail {
-		margin-top: 20px;
-		color: rgb(71, 100, 112);
+		margin-top: var(--top-medium);
+		color: var(--foreground);
 	}
    /* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {
@@ -77,8 +77,8 @@ export default {
 		}
 		.footer__title {
 			grid-column: 1 / span 1;
-			padding-left: 10px;
-			margin-left: 10px;
+			padding-left: var(--left-small);
+			margin-left: var(--left-small);
 			font-size: 0.7rem;
 
 		}

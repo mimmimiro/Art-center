@@ -28,7 +28,7 @@
 		grid-gap: var(--gap-big);
 	}
 	.container__header {
-		background-color: #fffefe;
+		background-color: var(--main-background);
 		grid-column: 1/ span 12;
 		display: grid;
 		height: 120px;
@@ -40,10 +40,10 @@
 	}
 	.header__navigation-link {
 		text-decoration: none;
-		color: black;
+		color: var(--foreground);
 		font-weight: bold;
 		font-size: 1.5rem;
-		padding: 20px;
+		padding: var(--padding-medium);
 	}
 	.header__navigation-link:hover,
 	.header__navigation-link:focus {
@@ -56,7 +56,7 @@
 		padding: 10px 0px 0px 0px;
 		grid-column: 1/ span 4;
 		grid-row: 1;
-		margin-left: 20px;
+		margin-left: var(--left-medium);
 	}
 	.container__header-logo:hover {
 		transform: rotateZ(360deg);
