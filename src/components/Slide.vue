@@ -3,7 +3,7 @@
 			<h2 class="slideshow__container-title">{{ caption }}</h2>
 			<section class="slideshow__container" v-for="slide, index in result" :key="slide._id">
 				<figure>
-					<!-- slideshow carousel - the pictures changes every 3 sekunds, and the slide stops when the mouse hovers over the -->
+					<!-- slideshow carousel - the pictures changes every 3 sekunds, and the slide stops when the mouse hovers -->
 					<img class="slideshow__container-image"
 					:src="slide.artistImage.asset.url"
 					:alt="slide.title"
