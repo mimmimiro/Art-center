@@ -15,9 +15,9 @@
 				</figure>
 			</section>
      			<button class="slideshow__next" @click="next">
-					  <img class="next__image" src="/images/point.png" alt="next"></button>
+					  <img class="next__image" src="/images/point.png" alt="next-button"></button>
      			<button class="slideshow__previous" @click="previous">
-					  <img class="previous__image" src="/images/pointb.png" alt="previous"></button>
+					  <img class="previous__image" src="/images/pointb.png" alt="previous-button"></button>
 	</section>
 </template>
 
