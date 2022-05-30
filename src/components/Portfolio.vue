@@ -81,7 +81,7 @@
 	}
 	.portfolio__text {
 		font-size: 1.2rem;
-		margin: 10px 120px 10px 120px;
+		margin: 10px 120px 20px 120px;
 		text-align:justify;
 	}
 	.project {
@@ -193,12 +193,12 @@
 		}
 		.portfolio__text {
 			font-size: 0.8rem;
-			margin: 10px 40px 10px 40px;
+			margin: 10px 40px 25px 40px;
 			text-align: justify;
 		}
 		.category {
 			font-size: 2rem;
-			margin: 35px 20px 10px 35px;
+			margin: 35px 20px 0px 35px;
 		}
 	}
 
