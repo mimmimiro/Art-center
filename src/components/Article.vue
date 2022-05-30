@@ -1,6 +1,6 @@
 <template>
 	<main class="article">
-					<!-- All the articles are fetched from sanity, and dynamic routing to indivdual articlepage -->
+			<!-- All the articles are fetched from sanity, and dynamic routing to indivdual articlepage -->
 		<article class="article__container">
 			<section class="article__section" v-for="article in result" :key="article._id">
 				<router-link :to="{ name: 'articlePage', params: { articleSlug: article.slug.current }}">
@@ -10,9 +10,8 @@
 								<img class="article__image" :src="article.articleImage.asset.url" :alt="article.title" >
 							</figure>
 							<div class="article__card-back">
-							<h2 class="article__card-back-title">{{article.title }}</h2>
-							<p class="article__card-text">{{ article.quote }}</p>
-							<p></p>
+								<h2 class="article__card-back-title">{{article.title }}</h2>
+								<p class="article__card-text">{{ article.quote }}</p>
 							</div>
 						</section>
 					</section>
