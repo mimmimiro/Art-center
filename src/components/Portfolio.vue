@@ -7,18 +7,20 @@
 					<br>
 					What makes our projects unique and different is our innovative approach to an art form and design element. We specialize in customized with a focus on interior design and art enhancement. We offer high quality picture framing with an attention to detail that is reflected in each new piece whether it be an individual art piece or multiple pieces for entire hotel project.
 				</p>
+
 				<!--The loading appears when problems with fetching from Sanity  -->
 			<div v-if="loading">Loading....</div>
 				<div v-else>
 						<span class="category">Choose category</span> 
 							<select class="category__dropdown" v-model="category">
-									<option  valeu="Ceramic">Ceramic</option>
-									<option valeu="painting">Painting</option>
-									<option valeu="Graphics">Graphics</option>
+								<option  valeu="Ceramic">Ceramic</option>
+								<option valeu="painting">Painting</option>
+								<option valeu="Graphics">Graphics</option>
 							</select>
-							<p class="category__quote">{{ quote }}</p>
+								<p class="category__quote">{{ quote }}</p>
+
+					<!-- All the projects fetched and dynamic routing to indivdual project -->
 					<section class="project">
-						<!-- All the projects fetched and dynamic routing to indivdual project -->
 						<section  v-for="project in result" :key="project._id">
 							<router-link :to="{ name: 'portofolioPage', params: { projectSlug: project.slug.current }}">
 								<card class="project__card">
@@ -27,10 +29,10 @@
 											<img class="project__image" :src="project.projectImage.asset.url" :alt="project.title">
 										</figure>
 											<div class="project__card-back">
-											<h2 class="project__card-back-title">{{project.title }}</h2>
-											<p class="project__card-text">{{ project.quote }}</p>
+												<h2 class="project__card-back-title">{{project.title }}</h2>
+												<p class="project__card-text">{{ project.quote }}</p>
 											</div>
-								</section>
+									</section>
 								</card>
 							</router-link>
 						</section>
@@ -106,7 +108,7 @@
 	}
 	.category { 
 		margin: 0px 10px 0px 120px;
-		padding-top: 10px;
+		padding-top: var(--top-small);
 		font-size: 1.2rem;
 		font-weight: bold;
 	}
@@ -134,9 +136,7 @@
 	.project__card {
 		border-radius: 12px;
 	}
-	.project__title {
-		color: rgb(71, 100, 112);
-	}
+	
 	/*horizontal flip when you move the mouse over the flip box container */
 	.project__card:hover .project__card-inner {
 		transform: rotateY(180deg);
@@ -153,12 +153,12 @@
 
 	.project__card-front {
 		background-color: #bbb;
-		color: black;
+		color: var(--foreground);
 	}
 
 	.project__card-back {
 		background-color: #f9f7f1;
-		color: #000;
+		color: var(--foreground);
 		transform: rotateY(180deg);
 		padding: 1em;
 	}

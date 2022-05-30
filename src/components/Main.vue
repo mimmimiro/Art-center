@@ -1,7 +1,7 @@
 <template>
 	<main class="frontpage">
-			<h1 class="frontpage__header">{{ title }}</h1>
-				<p class="frontpage__text">{{ about }}</p>
+		<h1 class="frontpage__header">{{ title }}</h1>
+			<p class="frontpage__text">{{ about }}</p>
 		<Article />
 		<figure :style="image" class="image"></figure>
 		<Slide />
@@ -48,12 +48,12 @@
 		font-size: 1.4rem;
 	}
 	.image {
-	 height: 60%;
-    width: 100vw; 
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+		height: 60%;
+		width: 100vw; 
+		background-position: right;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
 	}
 	/* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {
