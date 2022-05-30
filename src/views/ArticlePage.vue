@@ -1,18 +1,16 @@
 <template>
-		<main>
-			<!-- created articlepage based on each article slug -->
-			<section v-for="article in result" :key="article._id" class="articlePage">
-				<h1 class="articlePage__title"> {{ article.title}}</h1>
+	<main>
+		<!-- created articlepage based on each article slug -->
+		<article v-for="article in result" :key="article._id" class="articlePage">
+			<h1 class="articlePage__title"> {{ article.title}}</h1>
 				<img class="articlePage__image" :src="article.articleImage.asset.url" :alt="article.caption">
 				<p class="articlePage__description">{{ article.description }}</p>
 				<h2 class="articlePage__subtitle">{{ article.subtitle}}</h2>
 				<p class="articlePage__description">{{ article.about }}</p>
 				<p class="articlePage__description">{{ article.article }}</p>
-			</section>
-		</main>
+		</article>
+	</main>
 </template>
-
-
 
 <script>
 	import query from '../groq/articlePage.groq?raw';
@@ -51,7 +49,7 @@
 	}
 	.articlePage__subtitle {
 		font-weight: 600;
-		margin: 10px;
+		margin: var(--margin-small);
 		grid-column: 2/ span 5;
 	}
 	.articlePage__image {
@@ -66,13 +64,13 @@
 		text-align: justify;
 		font-size: 1.2rem;
 		line-height: 1.5rem;
-		margin: 10px;
+		margin: var(--margin-small);
 	}
 	/* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {
 		.articlePage__subtitle {
 		font-weight: 500;
-		margin: 10px;
+		margin: var(--margin-small);
 		grid-column: 2/ span 11;
 	}
 	.articlePage__description {

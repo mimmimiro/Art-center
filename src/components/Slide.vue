@@ -83,7 +83,7 @@
 			},
 
 			mounted  () {
-			this.startRotation();
+				this.startRotation();
 			}
 	}
 </script>
@@ -94,7 +94,7 @@
 		align-items: center;
 		justify-content: center;
 		margin: 0;
-		padding: 10px;
+		padding: var(--padding-small);
 		width: 100vw;
 		height: 50vh;
 		color: #34495e;
@@ -104,7 +104,7 @@
 	.slideshow__container-title {
 		margin: 1.5rem;
 		font-size: 3rem;
-		padding-top: 10px;
+		padding-top: var(--padding-small);
 	}
 	.slideshow__container-caption {
 		font-weight: bold;

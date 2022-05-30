@@ -1,12 +1,9 @@
 <template>
 		<main class="portfolio">
 			 <!-- project section - all the projects are fetched from Sanity -->
-			<h1 class="portfolio__header">{{ title }}</h1>
-				<p class="portfolio__text">Featuring detailed projects of artwork, these projects contain a wealth of knowledge about ideas explored, artists studied and artistic techniques and processes used, making them valuable learning tools for others.
-					<br>
-					<br>
-					What makes our projects unique and different is our innovative approach to an art form and design element. We specialize in customized with a focus on interior design and art enhancement. We offer high quality picture framing with an attention to detail that is reflected in each new piece whether it be an individual art piece or multiple pieces for entire hotel project.
-				</p>
+			<h1 class="portfolio__header">{{ portofolioStore.title }}</h1>
+				<p class="portfolio__text">{{ portofolioStore.lead }}</p>
+				<p class="portfolio__text">{{ portofolioStore.text }}</p>
 
 				<!--The loading appears when problems with fetching from Sanity  -->
 			<div v-if="loading">Loading....</div>
@@ -17,7 +14,7 @@
 								<option valeu="painting">Painting</option>
 								<option valeu="Graphics">Graphics</option>
 							</select>
-								<p class="category__quote">{{ quote }}</p>
+								<p class="category__quote">{{ portofolioStore.quote }}</p>
 
 					<!-- All the projects fetched and dynamic routing to indivdual project -->
 					<section class="project">
@@ -55,17 +52,21 @@
 		data() {
 			return {
 				image: {backgroundImage: "url(./images/back.png)"},
-				title: 'Our projects',
+				// title: 'Our projects',
 				result: [],
 				category: '',
-				quote: '"Art is not what you see, but what you make others see."'
+				// quote: '"Art is not what you see, but what you make others see."'
 			}
 		},
 
 		computed: {
 			 result(){
                 return this.result.filter(project => !project.category.type.indexOf(this.category))
-		}
+		},
+			
+			portofolioStore() {
+				return this.$store.getters.getPortofolio; 
+			}
 		},
 		// grog query, to fetch information from sanity studio
 		async created() {

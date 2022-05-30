@@ -29,6 +29,10 @@
 	--padding-medium: 20px;
 	--padding-large: 30px;
 
+	--margin-small: 10px;
+	--margin-medium: 20px;
+	--margin-large: 30px;
+
 	/* grid */
 	--gap-big: 4px;
 	--grid-column-12: repeat(12, 1fr);

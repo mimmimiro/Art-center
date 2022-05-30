@@ -3,7 +3,9 @@
 		<section class="card__box" aria-label="customer review">
 			<h2 class="card__title">{{ title }}</h2>
 			<span class="card__review">{{ review }}</span>
-			<figure><img class="card__image" :src="image"></figure>
+			<figure>
+				<img class="card__image" :src="image">
+			</figure>
 			<span class="name">-{{ name }}</span>
 		</section>
 	</main>

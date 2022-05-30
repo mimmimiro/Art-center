@@ -4,7 +4,6 @@ import Portfolio from './components/Portfolio.vue';
 import About from './views/About.vue';
 import ContactForm from './components/ContactForm.vue';
 import ArticlePage from './views/ArticlePage.vue';
-import ArtistPage from './views/ArtistPage.vue';
 
 export default [
 	{ 
@@ -17,11 +16,7 @@ export default [
 		path: '/About', 
 		component: About
 	},
-	{ 
-		name: 'artistPage', 
-		path: '/:artistSlug', 
-		component: ArtistPage
-	},
+
 	
 	{ 
 		name: 'form', 

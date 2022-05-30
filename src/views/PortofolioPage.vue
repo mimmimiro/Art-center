@@ -1,18 +1,18 @@
 <template>
-		<main>
-			<!-- created projectpage based on each project slug -->
-			<section v-for="project in result" :key="project._id" class="page">
-				<h1 class="page__title"> {{ project.title}}</h1>
+	<main>
+		<!-- created projectpage based on each project slug -->
+		<section v-for="project in result" :key="project._id" class="page">
+			<h1 class="page__title"> {{ project.title}}</h1>
 				<img class="page__image" :src="project.projectImage.asset.url" :alt="project.caption">
 				<div class="page__year">Project year
 					{{ project.year}}
 				</div>
 					<img class="page__item" :src="project.itemImage.asset.url" :alt="project.title">
-				<p class="page__description">{{ project.description }}</p>
-				<h2 class="page__subtitle">{{ project.subTitle}}</h2>
-				<p class="page__description">{{ project.about }}</p>
-			</section>
-		</main>
+					<p class="page__description">{{ project.description }}</p>
+					<h2 class="page__subtitle">{{ project.subTitle}}</h2>
+					<p class="page__description">{{ project.about }}</p>
+		</section>
+	</main>
 </template>
 
 
@@ -61,11 +61,11 @@
 	}
 	.page__item {
 		width: 30vw;
-		margin: 20px;
+		margin: var(--margin-medium);
 	}
 	.page__subtitle {
 		font-weight: bold;
-		margin: 20px;
+		margin: var(--margin-medium);
 		grid-column: 2/ span 9;
 	}
 	.page__description {
