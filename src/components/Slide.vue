@@ -7,13 +7,16 @@
 					<img class="slideshow__container-image"
 					:src="slide.artistImage.asset.url"
 					:alt="slide.title"
-					:class="{ active: isActive(index) }"
+				   :class="{ active: isActive(index) }" 
 					@mouseover="stopRotation"
 					@mouseout="startRotation"
 					/>
 					<p class="slideshow__container-caption">{{ slide.caption}}</p>
 				</figure>
 			</section>
+     			<button class="next" @click="next"><img class="next__image" src="/images/point.png" alt="next"></button>
+     			<button class="previous" @click="previous"><img class="next__image" src="/images/pointb.png" alt="previous"></button>
+
 	</section>
 </template>
 
@@ -29,7 +32,6 @@
 			return {
 				current: 0,
 				caption: 'The artists!',
-				speed: 3000,
 				result: [],
 				timer: null
 			}
@@ -43,47 +45,34 @@
 		methods: {
 			// methods to stop and start the rotation of the slides, when the mouse hovers over/away from the pictures
 			startRotation() {
-				this.timer = setInterval(this.next, this.speed);
+				this.timer = setInterval(this.next, 3000);
 			},
 
 			stopRotation() {
-				timeout(this.timer);
+				slideTimeout(this.timer);
 				this.timer = null;
 			},
 
 			next() {
-				let current = this.current;
-				let next = current + 1;
-
-				if (next > this.result.length - 1) {
-				next = 0;
-				}
-				this.current = next;
+				this.current = this.current === this.result.length - 1 ? 0 : this.current + 1;
 				this.makeActive(this.current);
 			},
 
 			previous() {
-				let current = this.current;
-				let previous = current - 1;
-
-				if (previous < 0) {
-				previous = this.result.length -1;
-				}
-
-				this.current = previous;
+				this.current = this.current === 0 ? this.result.length - 1 : this.current - 1;
 				this.makeActive(this.current);
 			},
 
-			isActive (slide) {
+			isActive(slide) {
 				return this.current === slide;
 			},
 
-			makeActive (slide) {
+			makeActive(slide) {
 				this.current === slide;
 			},
 			},
 
-			mounted  () {
+			mounted() {
 				this.startRotation();
 			}
 	}
