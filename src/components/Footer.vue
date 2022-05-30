@@ -45,6 +45,7 @@ export default {
 		color: var(--foreground);
 		padding-left: var(--left-small);
 		padding-top: var(--top-medium);
+		font-weight: bold;
 	}
 	
 	.footer__navigation {
@@ -57,6 +58,7 @@ export default {
 	.footer__navigation-link {
 		text-decoration: none;
 		color: var(--foreground);
+		font-weight: bold;
 	}
 	.footer__navigation-link--social {
 		width: 20px;
@@ -66,6 +68,7 @@ export default {
 	.footer__navigation-mail {
 		margin-top: var(--top-medium);
 		color: var(--foreground);
+		font-weight: bold;
 	}
    /* Small and medium screen devices  */
    @media screen and (max-width: 1024px) {

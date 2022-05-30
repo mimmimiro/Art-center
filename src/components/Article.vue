@@ -1,25 +1,25 @@
 <template>
 	<main class="article">
-					<!-- All the projects fetched and dynamic routing to indivdual project -->
-					<section class="article__container">
-					<section class="article__section" v-for="article in result" :key="article._id">
-			<router-link :to="{ name: 'articlePage', params: { articleSlug: article.slug.current }}">
-				<section class="article__card">
-					<section class="article__card-inner">
-						<figure class="article__card-front">
-							<img class="article__image" :src="article.articleImage.asset.url" :alt="article.title" >
-						</figure>
-					   <div class="article__card-back">
-						<h2 class="article__card-back-title">{{article.title }}</h2>
-						<p class="article__card-text">{{ article.quote }}</p>
-						<p></p>
-					</div>
-				 </section>
-				</section>
-			</router-link>
-		</section> 
-	</section>
-</main>
+					<!-- All the articles are fetched from sanity, and dynamic routing to indivdual articlepage -->
+		<article class="article__container">
+			<section class="article__section" v-for="article in result" :key="article._id">
+				<router-link :to="{ name: 'articlePage', params: { articleSlug: article.slug.current }}">
+					<section class="article__card">
+						<section class="article__card-inner">
+							<figure class="article__card-front">
+								<img class="article__image" :src="article.articleImage.asset.url" :alt="article.title" >
+							</figure>
+							<div class="article__card-back">
+							<h2 class="article__card-back-title">{{article.title }}</h2>
+							<p class="article__card-text">{{ article.quote }}</p>
+							<p></p>
+							</div>
+						</section>
+					</section>
+				</router-link>
+			</section> 
+		</article>
+	</main>
 </template>
 
 <script>
@@ -61,7 +61,6 @@
 		margin: 2rem 1rem;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 		perspective: 1000px; 
-		/* position: relative;  */
 		overflow: hidden;
 		top: 260px; 
 	}
@@ -100,7 +99,7 @@
 	}
 
 	.article__card-back {
-		 background-color: #f9f7f1;
+		background-color: #f9f7f1;
 		color: #000;
 		transform: rotateY(180deg);
 		padding: 1em;
