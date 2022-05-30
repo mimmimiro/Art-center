@@ -70,7 +70,7 @@
 		text-align: center;
 		margin: 0px 0px 10px 0px;
 	}
-	/* Small and medium screen devices  */
+	/* Small screen devices  */
    @media screen and (max-width: 1024px) {
 		.about__title {
 			grid-column: 2/ span 10;

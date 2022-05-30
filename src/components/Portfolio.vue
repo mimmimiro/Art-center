@@ -174,7 +174,7 @@
 		background-attachment: fixed;
 	}
 	
-	/* Small and medium screen devices  */
+	/* Small screen devices  */
    @media screen and (max-width: 1024px) {
       .portofolio {
           width: 100%;          

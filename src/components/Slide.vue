@@ -14,9 +14,10 @@
 					<p class="slideshow__container-caption">{{ slide.caption}}</p>
 				</figure>
 			</section>
-     			<button class="next" @click="next"><img class="next__image" src="/images/point.png" alt="next"></button>
-     			<button class="previous" @click="previous"><img class="next__image" src="/images/pointb.png" alt="previous"></button>
-
+     			<button class="slideshow__next" @click="next">
+					  <img class="next__image" src="/images/point.png" alt="next"></button>
+     			<button class="slideshow__previous" @click="previous">
+					  <img class="previous__image" src="/images/pointb.png" alt="previous"></button>
 	</section>
 </template>
 
@@ -123,7 +124,7 @@
 	.active {
 		opacity: 1;
 	}
-	/* Small and medium screen devices  */
+	/* Small screen devices  */
    @media screen and (max-width: 1024px) {
 		.slideshow__container-image {
 			width: 60vw;

@@ -107,7 +107,7 @@
 	.article__card-back-title {
 		margin: 15px;
 	}
-		/* Small and medium screen devices  */
+		/* Small screen devices  */
    @media screen and (max-width: 1024px) {
       .article {
           width: 100%;          

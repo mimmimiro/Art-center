@@ -66,7 +66,7 @@
 		line-height: 1.5rem;
 		margin: var(--margin-small);
 	}
-	/* Small and medium screen devices  */
+	/* Small screen devices  */
    @media screen and (max-width: 1024px) {
 		.articlePage__subtitle {
 		font-weight: 500;
