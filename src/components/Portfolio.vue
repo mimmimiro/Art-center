@@ -52,17 +52,15 @@
 		data() {
 			return {
 				image: {backgroundImage: "url(./images/back.png)"},
-				// title: 'Our projects',
 				result: [],
 				category: '',
-				// quote: '"Art is not what you see, but what you make others see."'
 			}
 		},
 
 		computed: {
-			 result(){
+			result(){
                 return this.result.filter(project => !project.category.type.indexOf(this.category))
-		},
+			},
 			
 			portofolioStore() {
 				return this.$store.getters.getPortofolio; 

@@ -1,7 +1,7 @@
 <template>
 	<main class="frontpage">
-		<h1 class="frontpage__header">{{ title }}</h1>
-			<p class="frontpage__text">{{ about }}</p>
+		<h1 class="frontpage__header">{{ artCenterStore.title }}</h1>
+			<p class="frontpage__text">{{ artCenterStore.about }}</p>
 		<Article />
 		<figure :style="image" class="image"></figure>
 		<Slide />
@@ -24,10 +24,15 @@
 		data() {
             return {
                 image: {backgroundImage: "url(./images/back.png)"},
-					 title: 'Welcome to the Art Center',
-					 about: 'Learn to create. Influence change. This is our mission statement—and our answer to how art and design impact our global society. Part call-to-action. Part promise. All opportunity.',
+					 
             };
-        }
+        },
+		  computed: {
+			  artCenterStore() {
+				  return this.$store.getters.getArtCenter; 
+
+			  }
+		  }
 	}
 </script>
 <style>
