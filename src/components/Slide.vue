@@ -50,7 +50,7 @@
 			},
 
 			stopRotation() {
-				slideTimeout(this.timer);
+				setTimeout(this.timer);
 				this.timer = null;
 			},
 
