@@ -11,7 +11,8 @@
 							</figure>
 							<div class="article__card-back">
 								<h2 class="article__card-back-title">{{article.title }}</h2>
-								<p class="article__card-text">{{ article.quote }}</p>
+								<p class="article__card-text">{{ article.quote }}</p> 
+								<p></p>
 							</div>
 						</section>
 					</section>
